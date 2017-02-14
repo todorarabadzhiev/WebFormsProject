@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CampingDBModelStoreContainer" CdmEntityContainer="CampingDBEntities">
+    <EntitySetMapping Name="CampingPlaces">
+      <EntityTypeMapping TypeName="CampingDBModel.CampingPlace">
+        <MappingFragment StoreEntitySet="CampingPlaces">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ClosestTown" ColumnName="ClosestTown" />
+          <ScalarProperty Name="GoogleMapsUrl" ColumnName="GoogleMapsUrl" />
+          <ScalarProperty Name="WaterOnSite" ColumnName="WaterOnSite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sightseeings">
+      <EntityTypeMapping TypeName="CampingDBModel.Sightseeing">
+        <MappingFragment StoreEntitySet="Sightseeings">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type_Id" ColumnName="Type_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SightseeingTypes">
+      <EntityTypeMapping TypeName="CampingDBModel.SightseeingType">
+        <MappingFragment StoreEntitySet="SightseeingTypes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiteCategories">
+      <EntityTypeMapping TypeName="CampingDBModel.SiteCategory">
+        <MappingFragment StoreEntitySet="SiteCategories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="SightseeingCampingPlaces" TypeName="CampingDBModel.SightseeingCampingPlaces" StoreEntitySet="SightseeingCampingPlaces">
+      <EndProperty Name="CampingPlaces">
+        <ScalarProperty Name="Id" ColumnName="CampingPlace_Id" />
+      </EndProperty>
+      <EndProperty Name="Sightseeings">
+        <ScalarProperty Name="Id" ColumnName="Sightseeing_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SiteCategoryCampingPlaces" TypeName="CampingDBModel.SiteCategoryCampingPlaces" StoreEntitySet="SiteCategoryCampingPlaces">
+      <EndProperty Name="CampingPlaces">
+        <ScalarProperty Name="Id" ColumnName="CampingPlace_Id" />
+      </EndProperty>
+      <EndProperty Name="SiteCategories">
+        <ScalarProperty Name="Id" ColumnName="SiteCategory_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

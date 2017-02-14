@@ -1,0 +1,17 @@
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\bin\Debug\CampingDB.dll.config
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\bin\Debug\CampingDB.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\bin\Debug\CampingDB.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\bin\Debug\EntityFramework.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\bin\Debug\EntityFramework.xml
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.csprojResolveAssemblyReference.cache
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.Migrations.InitialCreate.resources
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.csproj.GenerateResource.Cache
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.Migrations.CampingPlacetoSightseeing.resources
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.Migrations.customuseradded.resources
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.Migrations.fieldnamesadjusted.resources
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.Migrations.fieldnamespreadjusted.resources

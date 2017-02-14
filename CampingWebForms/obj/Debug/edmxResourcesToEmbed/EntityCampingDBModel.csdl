@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CampingDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CampingPlace">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClosestTown" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GoogleMapsUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="WaterOnSite" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Sightseeings" Relationship="Self.SightseeingCampingPlaces" FromRole="CampingPlaces" ToRole="Sightseeings" />
+    <NavigationProperty Name="SiteCategories" Relationship="Self.SiteCategoryCampingPlaces" FromRole="CampingPlaces" ToRole="SiteCategories" />
+  </EntityType>
+  <EntityType Name="Sightseeing">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Type_Id" Type="Guid" />
+    <NavigationProperty Name="SightseeingType" Relationship="Self.FK_dbo_Sightseeings_dbo_SightseeingTypes_Type_Id" FromRole="Sightseeings" ToRole="SightseeingTypes" />
+    <NavigationProperty Name="CampingPlaces" Relationship="Self.SightseeingCampingPlaces" FromRole="Sightseeings" ToRole="CampingPlaces" />
+  </EntityType>
+  <EntityType Name="SightseeingType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Sightseeings" Relationship="Self.FK_dbo_Sightseeings_dbo_SightseeingTypes_Type_Id" FromRole="SightseeingTypes" ToRole="Sightseeings" />
+  </EntityType>
+  <EntityType Name="SiteCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CampingPlaces" Relationship="Self.SiteCategoryCampingPlaces" FromRole="SiteCategories" ToRole="CampingPlaces" />
+  </EntityType>
+  <Association Name="FK_dbo_Sightseeings_dbo_SightseeingTypes_Type_Id">
+    <End Role="SightseeingTypes" Type="Self.SightseeingType" Multiplicity="0..1" />
+    <End Role="Sightseeings" Type="Self.Sightseeing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SightseeingTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sightseeings">
+        <PropertyRef Name="Type_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SightseeingCampingPlaces">
+    <End Role="CampingPlaces" Type="Self.CampingPlace" Multiplicity="*" />
+    <End Role="Sightseeings" Type="Self.Sightseeing" Multiplicity="*" />
+  </Association>
+  <Association Name="SiteCategoryCampingPlaces">
+    <End Role="CampingPlaces" Type="Self.CampingPlace" Multiplicity="*" />
+    <End Role="SiteCategories" Type="Self.SiteCategory" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="CampingDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CampingPlaces" EntityType="Self.CampingPlace" />
+    <EntitySet Name="Sightseeings" EntityType="Self.Sightseeing" />
+    <EntitySet Name="SightseeingTypes" EntityType="Self.SightseeingType" />
+    <EntitySet Name="SiteCategories" EntityType="Self.SiteCategory" />
+    <AssociationSet Name="FK_dbo_Sightseeings_dbo_SightseeingTypes_Type_Id" Association="Self.FK_dbo_Sightseeings_dbo_SightseeingTypes_Type_Id">
+      <End Role="SightseeingTypes" EntitySet="SightseeingTypes" />
+      <End Role="Sightseeings" EntitySet="Sightseeings" />
+    </AssociationSet>
+    <AssociationSet Name="SightseeingCampingPlaces" Association="Self.SightseeingCampingPlaces">
+      <End Role="CampingPlaces" EntitySet="CampingPlaces" />
+      <End Role="Sightseeings" EntitySet="Sightseeings" />
+    </AssociationSet>
+    <AssociationSet Name="SiteCategoryCampingPlaces" Association="Self.SiteCategoryCampingPlaces">
+      <End Role="CampingPlaces" EntitySet="CampingPlaces" />
+      <End Role="SiteCategories" EntitySet="SiteCategories" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
