@@ -418,14 +418,12 @@
     </Compile>
     <Compile Include="App_Start\Factories\ICustomPresenterFactory.cs" />
     <Compile Include="App_Start\Factories\WebFormsMvpPresenterFactory.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\NinjectModules\CampingNinjectModule.cs" />
     <Compile Include="App_Start\NinjectModules\DBNinjectModule.cs" />
     <Compile Include="App_Start\NinjectModules\MvpNinjectModule.cs" />
     <Compile Include="App_Start\NinjectWeb.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="CampingPlaceDetails.aspx.cs">
       <DependentUpon>CampingPlaceDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -477,7 +475,6 @@
     <Compile Include="Views\ICampingPlaceDetailsView.cs" />
     <Compile Include="Views\IHomeView.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CampingPlace.cs" />
     <Compile Include="Site.Master.cs">
@@ -494,7 +491,6 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="Startup.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -505,13 +501,15 @@
     <Compile Include="Views\ILoginView.cs" />
     <Compile Include="Views\ISiteCategoriesView.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Auth\Auth.csproj">
+      <Project>{62A194F7-C01E-458F-910B-9ACE2E191F46}</Project>
+      <Name>Auth</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CampingDB\CampingDB.csproj">
       <Project>{706BF628-6205-4BC2-BF0D-FC67D94E81F1}</Project>
       <Name>CampingDB</Name>

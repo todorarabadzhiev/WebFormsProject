@@ -1,10 +1,11 @@
-﻿using System;
-using System.Web;
+﻿using Auth;
+using Auth.Helpers;
+using Auth.IdentityConfig;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Owin;
-using CampingWebForms.Models;
+using System;
+using System.Web;
 
 namespace CampingWebForms.Account
 {

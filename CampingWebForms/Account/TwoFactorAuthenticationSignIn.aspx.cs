@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using Auth;
+using Auth.Helpers;
+using Auth.IdentityConfig;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
-using CampingWebForms.Models;
+using System;
+using System.Linq;
+using System.Web;
+using System.Web.UI.WebControls;
 
 namespace CampingWebForms.Account
 {

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampingWebForms.Tests", "Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampingDB", "CampingDB\CampingDB.csproj", "{706BF628-6205-4BC2-BF0D-FC67D94E81F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth", "Auth\Auth.csproj", "{62A194F7-C01E-458F-910B-9ACE2E191F46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{706BF628-6205-4BC2-BF0D-FC67D94E81F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{706BF628-6205-4BC2-BF0D-FC67D94E81F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{706BF628-6205-4BC2-BF0D-FC67D94E81F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62A194F7-C01E-458F-910B-9ACE2E191F46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62A194F7-C01E-458F-910B-9ACE2E191F46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62A194F7-C01E-458F-910B-9ACE2E191F46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62A194F7-C01E-458F-910B-9ACE2E191F46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
