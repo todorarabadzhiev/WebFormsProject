@@ -1,0 +1,14 @@
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\obj\Debug\MVP.csprojResolveAssemblyReference.cache
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\MVP.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\MVP.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\Services.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\WebFormsMvp.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\CampingDB.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\EntityFramework.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\Services.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\WebFormsMvp.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\WebFormsMvp.xml
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\CampingDB.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\EntityFramework.xml
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\obj\Debug\MVP.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\obj\Debug\MVP.pdb

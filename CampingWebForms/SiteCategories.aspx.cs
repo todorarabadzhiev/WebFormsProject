@@ -1,6 +1,6 @@
-﻿using CampingWebForms.Models;
-using CampingWebForms.Presenters;
-using CampingWebForms.Views;
+﻿using MVP.Models;
+using MVP.Presenters;
+using MVP.Views;
 using System;
 using WebFormsMvp;
 using WebFormsMvp.Web;

@@ -75,6 +75,10 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -174,9 +178,6 @@
     <Reference Include="Microsoft.AspNet.Identity.Owin">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Providers">
       <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
     </Reference>
@@ -189,20 +190,8 @@
     <Reference Include="Microsoft.Owin.Security">
       <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security.Facebook">
-      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Owin.Security.Cookies">
       <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Google">
-      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Twitter">
-      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
-      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
     </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -448,22 +437,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AddCampingPlaceClickEventArgs.cs" />
-    <Compile Include="Models\AddCampingPlaceViewModel.cs" />
-    <Compile Include="Models\CampingPlaceDetailsEventArgs.cs" />
-    <Compile Include="Models\CampingPlaceDetailsViewModel.cs" />
-    <Compile Include="Models\SiteCategoriesViewModel.cs" />
-    <Compile Include="Presenters\AddCampingPlacePresenter.cs" />
-    <Compile Include="Presenters\CampingPlaceDetailsPresenter.cs" />
-    <Compile Include="Presenters\HomePresenter.cs" />
-    <Compile Include="Presenters\SiteCategoriesPresenter.cs" />
-    <Compile Include="Services\CampingDbDataProvider.cs" />
-    <Compile Include="Services\ICampingPlace.cs" />
-    <Compile Include="Services\IDataProvider.cs" />
-    <Compile Include="Services\ISightseeing.cs" />
-    <Compile Include="Services\ISiteCategory.cs" />
-    <Compile Include="Services\Sightseeing.cs" />
-    <Compile Include="Services\SiteCategory.cs" />
     <Compile Include="SiteCategories.aspx.cs">
       <DependentUpon>SiteCategories.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -471,12 +444,7 @@
     <Compile Include="SiteCategories.aspx.designer.cs">
       <DependentUpon>SiteCategories.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\IAddCampingPlaceView.cs" />
-    <Compile Include="Views\ICampingPlaceDetailsView.cs" />
-    <Compile Include="Views\IHomeView.cs" />
-    <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\CampingPlace.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -498,8 +466,6 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Views\ILoginView.cs" />
-    <Compile Include="Views\ISiteCategoriesView.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -513,6 +479,14 @@
     <ProjectReference Include="..\CampingDB\CampingDB.csproj">
       <Project>{706BF628-6205-4BC2-BF0D-FC67D94E81F1}</Project>
       <Name>CampingDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVP\MVP.csproj">
+      <Project>{26EF8270-FFFB-4D08-9676-3889757B2DE3}</Project>
+      <Name>MVP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{1418D92B-4261-434A-A930-0E011D387FEA}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

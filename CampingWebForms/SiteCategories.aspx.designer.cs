@@ -13,7 +13,7 @@ namespace CampingWebForms {
     public partial class SiteCategories {
         
         /// <summary>
-        /// DetailsView control.
+        /// ListViewSiteCategories control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.

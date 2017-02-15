@@ -1,0 +1,12 @@
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\bin\Debug\Services.dll.config
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\bin\Debug\Services.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\bin\Debug\Services.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\bin\Debug\CampingDB.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\bin\Debug\EntityFramework.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\bin\Debug\CampingDB.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\bin\Debug\EntityFramework.xml
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\obj\Debug\Services.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\obj\Debug\Services.pdb

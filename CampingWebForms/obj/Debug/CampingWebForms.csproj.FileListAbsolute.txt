@@ -37,11 +37,7 @@ C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCampin
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.Cookies.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.dll
-C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.Twitter.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.ScriptManager.MSAjax.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.ScriptManager.WebForms.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Web.Infrastructure.dll
@@ -82,11 +78,7 @@ C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCampin
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.xml
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.xml
-C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.Facebook.xml
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\obj\Debug\CampingWebForms.csprojResolveAssemblyReference.cache
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\obj\Debug\CampingWebForms.dll
@@ -95,3 +87,7 @@ C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCampin
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\CampingDB.pdb
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Auth.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Auth.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\MVP.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Services.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\MVP.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Services.pdb

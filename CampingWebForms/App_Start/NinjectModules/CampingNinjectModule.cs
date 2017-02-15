@@ -1,5 +1,5 @@
-﻿using CampingWebForms.Services;
-using Ninject.Modules;
+﻿using Ninject.Modules;
+using Services.DataProviders;
 
 namespace CampingWebForms.App_Start.NinjectModules
 {
