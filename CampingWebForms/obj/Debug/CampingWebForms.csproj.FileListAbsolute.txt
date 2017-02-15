@@ -91,3 +91,5 @@ C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCampin
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Services.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\MVP.pdb
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Services.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Repositories.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms\bin\Repositories.pdb

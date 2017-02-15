@@ -64,6 +64,10 @@
       <Project>{706BF628-6205-4BC2-BF0D-FC67D94E81F1}</Project>
       <Name>CampingDB</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Repositories\Repositories.csproj">
+      <Project>{E89D85A8-B59B-4051-B7D9-07CB72F567DB}</Project>
+      <Name>Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

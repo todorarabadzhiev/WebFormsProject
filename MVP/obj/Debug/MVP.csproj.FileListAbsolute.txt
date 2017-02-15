@@ -12,3 +12,5 @@ C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCampin
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\EntityFramework.xml
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\obj\Debug\MVP.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\obj\Debug\MVP.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\Repositories.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\MVP\bin\Debug\Repositories.pdb

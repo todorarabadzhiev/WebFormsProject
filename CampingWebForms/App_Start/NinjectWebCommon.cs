@@ -64,7 +64,7 @@ namespace CampingWebForms.App_Start
         {
             kernel.Load(new MvpNinjectModule());
             kernel.Load(new CampingNinjectModule());
-            //kernel.Load(new DBNinjectModule());
+            kernel.Load(new DBNinjectModule());
 
             //Mapper.Initialize(cfg =>
             //{

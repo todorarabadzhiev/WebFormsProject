@@ -1,4 +1,4 @@
-﻿using CampingDB;
+﻿using Repositories;
 using Services.Models;
 using System;
 using System.Collections.Generic;
@@ -8,10 +8,22 @@ namespace Services.DataProviders
 {
     public class CampingDbDataProvider : IDataProvider
     {
-        private readonly CampingDBContext dbContext;
-        public CampingDbDataProvider(CampingDBContext dbContext)
+        private readonly ICampingDBRepository repository;
+        private readonly Func<IUnitOfWork> unitOfWork;
+
+        public CampingDbDataProvider(ICampingDBRepository repository, Func<IUnitOfWork> unitOfWork)
         {
-            this.dbContext = dbContext;
+            if (repository == null)
+            {
+                throw new ArgumentNullException("CampingDBRepository");
+            }
+            if (unitOfWork == null)
+            {
+                throw new ArgumentNullException("UnitOfWork");
+            }
+
+            this.repository = repository;
+            this.unitOfWork = unitOfWork;
         }
 
         public void AddCampingPlace(
@@ -19,6 +31,8 @@ namespace Services.DataProviders
             string googleMapsUrl, bool hasWater,
             List<string> sightseeingNames, List<string> siteCategoryNames)
         {
+            IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository = 
+                this.repository.GetCampingPlaceRepository();
             ICampingPlace newCampingPlace = new CampingPlace();
             newCampingPlace.Name = name;
             newCampingPlace.Description = description;
@@ -27,27 +41,31 @@ namespace Services.DataProviders
             newCampingPlace.SightseeingNames = sightseeingNames;
             newCampingPlace.SiteCategoriesNames = siteCategoryNames;
 
-            CampingDB.Models.CampingPlace dbCampingPlace = convertFromPlace(newCampingPlace);
-            this.dbContext.CampingPlaces.Add(dbCampingPlace);
-            dbContext.SaveChanges();
+            using (var uw = this.unitOfWork())
+            {
+                CampingDB.Models.CampingPlace dbCampingPlace = convertFromPlace(newCampingPlace);
+                capmingPlaceRepository.Add(dbCampingPlace);
+                uw.Commit();
+            }
         }
 
         public IEnumerable<ICampingPlace> GetCampingPlaceById(Guid id)
         {
+            IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository = 
+                this.repository.GetCampingPlaceRepository();
             var places = new List<ICampingPlace>();
-            var dbPlace = this.dbContext.CampingPlaces.Where(p => p.Id == id).ToList();
-            foreach (var p in dbPlace)
-            {
-                places.Add(ConvertToPlace(p));
-            }
+            var dbPlace = capmingPlaceRepository.GetById(id);
+            places.Add(ConvertToPlace(dbPlace));
 
             return places;
         }
 
         public IEnumerable<ICampingPlace> GetAllCampingPlaces()
         {
+            IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository = 
+                this.repository.GetCampingPlaceRepository();
             var places = new List<ICampingPlace>();
-            var dbPlaces = this.dbContext.CampingPlaces.ToList();
+            var dbPlaces = capmingPlaceRepository.GetAll();
             foreach (var p in dbPlaces)
             {
                 places.Add(ConvertToPlace(p));
@@ -58,8 +76,10 @@ namespace Services.DataProviders
 
         public IEnumerable<ISiteCategory> GetAllSiteCategories()
         {
+            IGenericRepository<CampingDB.Models.SiteCategory>siteCategoryRepository = 
+                this.repository.GetSiteCategoryRepository();
             var categories = new List<ISiteCategory>();
-            var dbCategories = this.dbContext.SiteCategories.ToList();
+            var dbCategories = siteCategoryRepository.GetAll();
             foreach (var c in dbCategories)
             {
                 categories.Add(ConvertToCategory(c));
@@ -70,8 +90,10 @@ namespace Services.DataProviders
 
         public IEnumerable<ISightseeing> GetAllSightseeings()
         {
+            IGenericRepository<CampingDB.Models.Sightseeing> sightseeingRepository =
+                this.repository.GetSightseeingRepository();
             var sightseeings = new List<ISightseeing>();
-            var dbSightseeings = this.dbContext.Sightseeings.ToList();
+            var dbSightseeings = sightseeingRepository.GetAll();
             foreach (var s in dbSightseeings)
             {
                 sightseeings.Add(ConvertToSightseeeing(s));
@@ -99,12 +121,12 @@ namespace Services.DataProviders
             place.WaterOnSite = p.HasWater;
             place.AddedOn = DateTime.Now;
 
-            place.Sightseeings = dbContext.Sightseeings
-                    .Where(s => p.SightseeingNames.Contains(s.Name))
-                    .ToList();
-            place.SiteCategories = dbContext.SiteCategories
-                    .Where(s => p.SiteCategoriesNames.Contains(s.Name))
-                    .ToList();
+            IGenericRepository<CampingDB.Models.Sightseeing> sightseeingRepository =
+                this.repository.GetSightseeingRepository();
+            IGenericRepository<CampingDB.Models.SiteCategory> siteCategoryRepository =
+                this.repository.GetSiteCategoryRepository();
+            place.Sightseeings = sightseeingRepository.GetAll(s => p.SightseeingNames.Contains(s.Name)).ToList();
+            place.SiteCategories = siteCategoryRepository.GetAll(s => p.SiteCategoriesNames.Contains(s.Name)).ToList();
 
             return place;
         }

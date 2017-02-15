@@ -484,6 +484,10 @@
       <Project>{26EF8270-FFFB-4D08-9676-3889757B2DE3}</Project>
       <Name>MVP</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Repositories\Repositories.csproj">
+      <Project>{E89D85A8-B59B-4051-B7D9-07CB72F567DB}</Project>
+      <Name>Repositories</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Services\Services.csproj">
       <Project>{1418D92B-4261-434A-A930-0E011D387FEA}</Project>
       <Name>Services</Name>

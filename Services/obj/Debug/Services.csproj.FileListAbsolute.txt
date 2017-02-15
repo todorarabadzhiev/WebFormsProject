@@ -10,3 +10,5 @@ C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCampin
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\obj\Debug\Services.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\obj\Debug\Services.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\bin\Debug\Repositories.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\Services\bin\Debug\Repositories.pdb
