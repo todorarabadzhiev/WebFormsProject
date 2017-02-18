@@ -14,17 +14,22 @@ namespace Repositories
 
         public IGenericRepository<CampingPlace> GetCampingPlaceRepository()
         {
-            return new CampingDBGenericRepository<CampingPlace>(this.dbContext);
+            return new EFGenericRepository<CampingPlace>(this.dbContext);
         }
 
         public IGenericRepository<SiteCategory> GetSiteCategoryRepository()
         {
-            return new CampingDBGenericRepository<SiteCategory>(this.dbContext);
+            return new EFGenericRepository<SiteCategory>(this.dbContext);
         }
 
         public IGenericRepository<Sightseeing> GetSightseeingRepository()
         {
-            return new CampingDBGenericRepository<Sightseeing>(this.dbContext);
+            return new EFGenericRepository<Sightseeing>(this.dbContext);
+        }
+
+        public IGenericRepository<ImageFile> GetImageFileRepository()
+        {
+            return new EFGenericRepository<ImageFile>(this.dbContext);
         }
     }
 }

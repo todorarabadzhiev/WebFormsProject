@@ -26,7 +26,6 @@ C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCampin
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.Owin.Security.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.AspNet.FriendlyUrls.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Owin.dll
-C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\CampingDB.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Ninject.Web.Common.dll
@@ -46,7 +45,6 @@ C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCampin
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.Owin.Security.xml
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.AspNet.FriendlyUrls.xml
-C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\CampingDB.pdb
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Ninject.Web.Common.xml
@@ -58,3 +56,15 @@ C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCampin
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\obj\Debug\CampingWebForms.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\obj\Debug\CampingWebForms.Tests.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\obj\Debug\CampingWebForms.Tests.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\MVP.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Repositories.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Auth.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Services.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\MVP.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Repositories.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Auth.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Services.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml

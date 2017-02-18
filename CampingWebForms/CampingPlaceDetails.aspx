@@ -19,12 +19,16 @@
                 Enabled="false" />
             <h3>Тип място</h3>
             <asp:BulletedList runat="server" DataSource='<%# Eval("SiteCategoriesNames") %>'>
-                <%--<asp:ListItem />--%>
             </asp:BulletedList>
             <h3>Забележителности</h3>
             <asp:BulletedList runat="server" DataSource='<%# Eval("SightseeingNames") %>'>
-                <%--<asp:ListItem />--%>
             </asp:BulletedList>
+            <asp:Repeater runat="server" DataSource='<%# Eval("ImageFiles") %>'>
+                <ItemTemplate>
+                    <%# Eval("FileName") %>
+                    <asp:Image ImageUrl='<%# ConvertToImage(Eval("Data")) %>' runat="server" Width="50px" />
+                </ItemTemplate>
+            </asp:Repeater>
         </ItemTemplate>
     </asp:FormView>
 </asp:Content>

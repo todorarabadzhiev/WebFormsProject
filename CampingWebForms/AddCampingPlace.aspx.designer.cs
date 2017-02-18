@@ -67,6 +67,60 @@ namespace CampingWebForms {
         protected global::System.Web.UI.WebControls.CheckBoxList CheckBoxListSightseeing;
         
         /// <summary>
+        /// ImgUploadUpdatePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel ImgUploadUpdatePanel;
+        
+        /// <summary>
+        /// ImgFileUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload ImgFileUpload;
+        
+        /// <summary>
+        /// AddImageButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddImageButton;
+        
+        /// <summary>
+        /// RegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator;
+        
+        /// <summary>
+        /// FilesCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl FilesCount;
+        
+        /// <summary>
+        /// UploadedImgFiles control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater UploadedImgFiles;
+        
+        /// <summary>
         /// ButtonAddCampingPlace control.
         /// </summary>
         /// <remarks>

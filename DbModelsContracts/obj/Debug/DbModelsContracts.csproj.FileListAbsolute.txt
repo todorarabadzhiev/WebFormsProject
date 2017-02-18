@@ -1,0 +1,5 @@
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\DbModelsContracts\bin\Debug\DbModelsContracts.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\DbModelsContracts\bin\Debug\DbModelsContracts.pdb
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\DbModelsContracts\obj\Debug\DbModelsContracts.csprojResolveAssemblyReference.cache
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\DbModelsContracts\obj\Debug\DbModelsContracts.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\DbModelsContracts\obj\Debug\DbModelsContracts.pdb

@@ -15,7 +15,7 @@ namespace CampingDB
         public IDbSet<CampingPlace> CampingPlaces { get; set; }
         public DbSet<CampingUser> CampingUsers { get; set; }
         public DbSet<Sightseeing> Sightseeings { get; set; }
-        public DbSet<SightseeingType> SightseeingTypes { get; set; }
+        //public DbSet<SightseeingType> SightseeingTypes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

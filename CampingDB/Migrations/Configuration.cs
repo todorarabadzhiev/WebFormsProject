@@ -1,9 +1,7 @@
-namespace CampingDB.Migrations
+﻿namespace CampingDB.Migrations
 {
-    using System;
-    using System.Data.Entity;
+    using Models;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<CampingDB.CampingDBContext>
     {
@@ -19,13 +17,22 @@ namespace CampingDB.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.Sightseeings.AddOrUpdate(
+              s => s.Name,
+              new Sightseeing { Name = "Пещери" },
+              new Sightseeing { Name = "Водопади" },
+              new Sightseeing { Name = "Исторически събития" },
+              new Sightseeing { Name = "Археологически разкопки" },
+              new Sightseeing { Name = "Развлечения" }
+            );
+            context.SiteCategories.AddOrUpdate(
+              s => s.Name,
+              new SiteCategory { Name = "Море" },
+              new SiteCategory { Name = "Планина" },
+              new SiteCategory { Name = "Река" },
+              new SiteCategory { Name = "Язовир" },
+              new SiteCategory { Name = "Остров" }
+            );
         }
     }
 }

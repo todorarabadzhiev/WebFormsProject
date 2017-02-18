@@ -7,5 +7,6 @@ namespace Repositories
         IGenericRepository<CampingPlace> GetCampingPlaceRepository();
         IGenericRepository<SiteCategory> GetSiteCategoryRepository();
         IGenericRepository<Sightseeing> GetSightseeingRepository();
+        IGenericRepository<ImageFile> GetImageFileRepository();
     }
 }

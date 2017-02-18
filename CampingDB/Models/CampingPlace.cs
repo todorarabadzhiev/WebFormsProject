@@ -9,11 +9,13 @@ namespace CampingDB.Models
     {
         private ICollection<SiteCategory> siteCategories;
         private ICollection<Sightseeing> sightseeings;
+        private ICollection<ImageFile> imageFiles;
 
         public CampingPlace()
         {
             this.siteCategories = new HashSet<SiteCategory>();
             this.sightseeings = new HashSet<Sightseeing>();
+            this.imageFiles = new HashSet<ImageFile>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -23,7 +25,6 @@ namespace CampingDB.Models
         [MaxLength(30), MinLength(2)]
         public string Name { get; set; }
         public string Description { get; set; }
-        public string ClosestTown { get; set; }
         public string GoogleMapsUrl { get; set; }
         public bool WaterOnSite { get; set; }
         public DateTime AddedOn { get; set; }
@@ -50,6 +51,18 @@ namespace CampingDB.Models
             set
             {
                 this.sightseeings = value;
+            }
+        }
+
+        public virtual ICollection<ImageFile> ImageFiles
+        {
+            get
+            {
+                return this.imageFiles;
+            }
+            set
+            {
+                this.imageFiles = value;
             }
         }
     }

@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +54,8 @@
     <Compile Include="DataProviders\IDataProvider.cs" />
     <Compile Include="Models\CampingPlace.cs" />
     <Compile Include="Models\ICampingPlace.cs" />
+    <Compile Include="Models\IImageFile.cs" />
+    <Compile Include="Models\ImageFile.cs" />
     <Compile Include="Models\ISightseeing.cs" />
     <Compile Include="Models\ISiteCategory.cs" />
     <Compile Include="Models\Sightseeing.cs" />
@@ -61,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CampingDB\CampingDB.csproj">
-      <Project>{706BF628-6205-4BC2-BF0D-FC67D94E81F1}</Project>
+      <Project>{706bf628-6205-4bc2-bf0d-fc67d94e81f1}</Project>
       <Name>CampingDB</Name>
     </ProjectReference>
     <ProjectReference Include="..\Repositories\Repositories.csproj">

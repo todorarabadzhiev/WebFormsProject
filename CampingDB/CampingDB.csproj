@@ -54,31 +54,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CampingDBContext.cs" />
-    <Compile Include="Migrations\201702121845089_InitialCreate.cs" />
-    <Compile Include="Migrations\201702121845089_InitialCreate.Designer.cs">
-      <DependentUpon>201702121845089_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702121850125_CampingPlace-to-Sightseeing.cs" />
-    <Compile Include="Migrations\201702121850125_CampingPlace-to-Sightseeing.Designer.cs">
-      <DependentUpon>201702121850125_CampingPlace-to-Sightseeing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702140346132_custom user added.cs" />
-    <Compile Include="Migrations\201702140346132_custom user added.Designer.cs">
-      <DependentUpon>201702140346132_custom user added.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702140432233_field names adjusted.cs" />
-    <Compile Include="Migrations\201702140432233_field names adjusted.Designer.cs">
-      <DependentUpon>201702140432233_field names adjusted.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702140444539_field names pre-adjusted.cs" />
-    <Compile Include="Migrations\201702140444539_field names pre-adjusted.Designer.cs">
-      <DependentUpon>201702140444539_field names pre-adjusted.cs</DependentUpon>
+    <Compile Include="Migrations\201702180049411_closest town removed.cs" />
+    <Compile Include="Migrations\201702180049411_closest town removed.Designer.cs">
+      <DependentUpon>201702180049411_closest town removed.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CampingPlace.cs" />
     <Compile Include="Models\CampingUser.cs" />
+    <Compile Include="Models\ImageFile.cs" />
     <Compile Include="Models\Sightseeing.cs" />
-    <Compile Include="Models\SightseeingType.cs" />
     <Compile Include="Models\SiteCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -86,22 +70,9 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702121845089_InitialCreate.resx">
-      <DependentUpon>201702121845089_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702121850125_CampingPlace-to-Sightseeing.resx">
-      <DependentUpon>201702121850125_CampingPlace-to-Sightseeing.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702140346132_custom user added.resx">
-      <DependentUpon>201702140346132_custom user added.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702140432233_field names adjusted.resx">
-      <DependentUpon>201702140432233_field names adjusted.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702140444539_field names pre-adjusted.resx">
-      <DependentUpon>201702140444539_field names pre-adjusted.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201702180049411_closest town removed.resx">
+      <DependentUpon>201702180049411_closest town removed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

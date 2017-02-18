@@ -19,7 +19,8 @@ namespace CampingDB.Models
 
         [MaxLength(30), MinLength(2)]
         public string Name { get; set; }
-        public virtual SightseeingType Type { get; set; }
+        //public Guid SightseeingTypeId { get; set; }
+        //public virtual SightseeingType Type { get; set; }
         public virtual ICollection<CampingPlace> CampingPlaces
         {
             get

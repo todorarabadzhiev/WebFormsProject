@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CampingDBGenericRepository.cs" />
+    <Compile Include="EfGenericRepository.cs" />
     <Compile Include="CampingDBRepository.cs" />
     <Compile Include="EfUnitOfWork.cs" />
     <Compile Include="ICampingDBRepository.cs" />

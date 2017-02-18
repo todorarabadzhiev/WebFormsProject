@@ -1,4 +1,5 @@
-﻿using MVP.Models;
+﻿using CampingWebForms.Common;
+using MVP.Models;
 using MVP.Models.EventModels;
 using MVP.Presenters;
 using MVP.Views;
@@ -23,6 +24,11 @@ namespace CampingWebForms
                 this.DetailsView.DataSource = this.Model.CampingPlaceDetails;
                 this.DetailsView.DataBind();
             }
+        }
+
+        public string ConvertToImage(object data)
+        {
+            return Utilities.ConvertToImage((byte[])data);
         }
     }
 }
