@@ -53,7 +53,9 @@
     <Compile Include="DataProviders\CampingDbDataProvider.cs" />
     <Compile Include="DataProviders\IDataProvider.cs" />
     <Compile Include="Models\CampingPlace.cs" />
+    <Compile Include="Models\CampingUser.cs" />
     <Compile Include="Models\ICampingPlace.cs" />
+    <Compile Include="Models\ICampingUser.cs" />
     <Compile Include="Models\IImageFile.cs" />
     <Compile Include="Models\ImageFile.cs" />
     <Compile Include="Models\ISightseeing.cs" />

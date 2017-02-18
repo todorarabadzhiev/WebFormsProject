@@ -64,7 +64,7 @@ namespace CampingWebForms
                     name, description, googleMapsUrl, hasWater, sightseeingNames,
                     siteCategoryNames, imageFileNames, imageFilesData);
                 this.AddCampingPlaceClick?.Invoke(sender, args);
-                Response.Redirect("~/Default");
+                Response.Redirect("~/");
             }
             else
             {

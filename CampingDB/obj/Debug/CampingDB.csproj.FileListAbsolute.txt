@@ -9,6 +9,5 @@ C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCampin
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.pdb
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\bin\Debug\Microsoft.Web.Infrastructure.dll
-C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.Migrations.closesttownremoved.resources
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.Migrations.Initial.resources
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.csproj.GenerateResource.Cache
-C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingDB\obj\Debug\CampingDB.Migrations.namerequired.resources

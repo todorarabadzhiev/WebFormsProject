@@ -1,5 +1,6 @@
 ﻿using CampingDB.Models;
 using System.Data.Entity;
+using System;
 
 namespace Repositories
 {
@@ -30,6 +31,11 @@ namespace Repositories
         public IGenericRepository<ImageFile> GetImageFileRepository()
         {
             return new EFGenericRepository<ImageFile>(this.dbContext);
+        }
+
+        public IGenericRepository<CampingUser> GetCampingUserRepository()
+        {
+            return new EFGenericRepository<CampingUser>(this.dbContext);
         }
     }
 }

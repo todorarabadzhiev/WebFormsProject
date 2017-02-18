@@ -14,5 +14,8 @@ namespace Services.DataProviders
         void AddCampingPlace(string name, string description, string googleMapsUrl,
                 bool hasWater, IEnumerable<string> sightseeingNames, IEnumerable<string> siteCategoryNames,
                 IList<string> imageFileNames, IList<byte[]> imageFiles);
+
+        void AddCampingUser(string appUserId,
+            string firstName, string lastName, string userName);
     }
 }

@@ -19,11 +19,19 @@ namespace CampingDB.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public Guid Id { get; set; }
-        public Guid RegisteredUserId { get; set; }//take from Account
+        public string ApplicationUserId { get; set; }//take from Account
 
         [Required]
         [MaxLength(30), MinLength(2)]
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+
+        [Required]
+        [MaxLength(30), MinLength(2)]
+        public string LastName { get; set; }
+
+        [Required]
+        [MaxLength(30), MinLength(2)]
+        public string UserName { get; set; }
         public DateTime RegisteredOn { get; set; }
 
         public virtual ICollection<CampingPlace> MyCampingPlaces
