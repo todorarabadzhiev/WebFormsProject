@@ -58,6 +58,10 @@
     <Compile Include="Migrations\201702180049411_closest town removed.Designer.cs">
       <DependentUpon>201702180049411_closest town removed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702180614335_name required.cs" />
+    <Compile Include="Migrations\201702180614335_name required.Designer.cs">
+      <DependentUpon>201702180614335_name required.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CampingPlace.cs" />
     <Compile Include="Models\CampingUser.cs" />
@@ -73,6 +77,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201702180049411_closest town removed.resx">
       <DependentUpon>201702180049411_closest town removed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702180614335_name required.resx">
+      <DependentUpon>201702180614335_name required.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

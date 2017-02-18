@@ -48,26 +48,35 @@ namespace CampingWebForms
 
         protected void ButtonAddCampingPlace_Click(object sender, EventArgs e)
         {
-            string name = this.TextBoxName.Text;
-            string description = this.TextBoxDescription.Text;
-            string googleMapsUrl = this.TextBoxGoogleMapsUrl.Text;
-            bool hasWater = this.CheckBoxHasWater.Checked;
-            IEnumerable<string> siteCategoryNames = this.GetSelectedItems(this.CheckBoxListCategories);
-            IEnumerable<string> sightseeingNames = this.GetSelectedItems(this.CheckBoxListSightseeing);
+            if (Session[ImgUrls] != null)
+            {
+                string name = this.TextBoxName.Text;
+                string description = this.TextBoxDescription.Text;
+                string googleMapsUrl = this.TextBoxGoogleMapsUrl.Text;
+                bool hasWater = this.CheckBoxHasWater.Checked;
+                IEnumerable<string> siteCategoryNames = this.GetSelectedItems(this.CheckBoxListCategories);
+                IEnumerable<string> sightseeingNames = this.GetSelectedItems(this.CheckBoxListSightseeing);
 
-            IList<string> imageFileNames = this.GetImageFileNames();
-            IList<byte[]> imageFilesData = this.GetImageFilesData(imageFileNames);
+                IList<string> imageFileNames = this.GetImageFileNames();
+                IList<byte[]> imageFilesData = this.GetImageFilesData(imageFileNames);
 
-            AddCampingPlaceClickEventArgs args = new AddCampingPlaceClickEventArgs(
-                name, description, googleMapsUrl, hasWater, sightseeingNames,
-                siteCategoryNames, imageFileNames, imageFilesData);
-            this.AddCampingPlaceClick?.Invoke(sender, args);
+                AddCampingPlaceClickEventArgs args = new AddCampingPlaceClickEventArgs(
+                    name, description, googleMapsUrl, hasWater, sightseeingNames,
+                    siteCategoryNames, imageFileNames, imageFilesData);
+                this.AddCampingPlaceClick?.Invoke(sender, args);
+                Response.Redirect("~/Default");
+            }
+            else
+            {
+                this.LblErrorMessage.Visible = true;
+            }
         }
 
         protected void AddImageButton_Click(object sender, EventArgs e)
         {
             if (this.ImgFileUpload.HasFile)
             {
+                this.LblErrorMessage.Visible = false;
                 string fileUrl = this.ImgFileUpload.FileName;
                 Session[ImgUrls] += fileUrl + Separator;
 

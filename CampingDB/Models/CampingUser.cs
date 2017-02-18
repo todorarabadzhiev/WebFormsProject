@@ -21,6 +21,7 @@ namespace CampingDB.Models
         public Guid Id { get; set; }
         public Guid RegisteredUserId { get; set; }//take from Account
 
+        [Required]
         [MaxLength(30), MinLength(2)]
         public string Name { get; set; }
         public DateTime RegisteredOn { get; set; }

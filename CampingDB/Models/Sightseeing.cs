@@ -17,6 +17,7 @@ namespace CampingDB.Models
         [Key]
         public Guid Id { get; set; }
 
+        [Required]
         [MaxLength(30), MinLength(2)]
         public string Name { get; set; }
         //public Guid SightseeingTypeId { get; set; }

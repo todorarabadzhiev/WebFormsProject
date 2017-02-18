@@ -22,10 +22,13 @@ namespace CampingDB.Models
         [Key]
         public Guid Id { get; set; }
 
+        [Required]
         [MaxLength(30), MinLength(2)]
         public string Name { get; set; }
         public string Description { get; set; }
         public string GoogleMapsUrl { get; set; }
+
+        [Required]
         public bool WaterOnSite { get; set; }
         public DateTime AddedOn { get; set; }
         public CampingUser AddedBy { get; set; }

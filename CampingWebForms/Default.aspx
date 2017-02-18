@@ -23,11 +23,10 @@
 
             <ItemTemplate>
                 <td class="col-md-2">
-                    <img src="image" alt="снимка от Мястото" /><br />
+                    <asp:Image ImageUrl='<%# ConvertToImage(Eval("ImageFiles[0].Data")) %>' runat="server" Width="150px" />
                     <asp:HyperLink runat="server" ID="hlDetails"
                         NavigateUrl='<%# "CampingPlaceDetails.aspx?id=" + Eval("Id") %>' Text='<%# Eval("Name") %>'>
                     </asp:HyperLink>
-                    <p>Кратка информация за Мястото</p>
                 </td>
             </ItemTemplate>
 

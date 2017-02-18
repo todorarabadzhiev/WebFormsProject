@@ -15,6 +15,6 @@ namespace Services.Models
         IEnumerable<Guid> SiteCategoriesIds { get; set; }
         IEnumerable<string> SiteCategoriesNames { get; set; }
         IEnumerable<string> SightseeingNames { get; set; }
-        IEnumerable<IImageFile> ImageFiles { get; set; }
+        IList<IImageFile> ImageFiles { get; set; }
     }
 }
