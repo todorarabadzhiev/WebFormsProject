@@ -7,8 +7,8 @@ namespace MVP.Presenters
 {
     public class SiteCategoriesPresenter : Presenter<ISiteCategoriesView>
     {
-        private readonly IDataProvider provider;
-        public SiteCategoriesPresenter(ISiteCategoriesView view, IDataProvider provider)
+        private readonly ISiteCategoryDataProvider provider;
+        public SiteCategoriesPresenter(ISiteCategoriesView view, ISiteCategoryDataProvider provider)
             : base(view)
         {
             this.provider = provider;

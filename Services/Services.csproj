@@ -50,8 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataProviders\CampingDbDataProvider.cs" />
-    <Compile Include="DataProviders\IDataProvider.cs" />
+    <Compile Include="DataProviders\CampingPlaceDataProvider.cs" />
+    <Compile Include="DataProviders\CampingUserDataProvider.cs" />
+    <Compile Include="DataProviders\ICampingPlaceDataProvider.cs" />
+    <Compile Include="DataProviders\ICampingUserDataProvider.cs" />
+    <Compile Include="DataProviders\ISiteCategoryDataProvider.cs" />
+    <Compile Include="DataProviders\ISightseeingDataProvider.cs" />
+    <Compile Include="DataProviders\SightseeingDataProvider.cs" />
+    <Compile Include="DataProviders\SiteCategoryDataProvider.cs" />
     <Compile Include="Models\CampingPlace.cs" />
     <Compile Include="Models\CampingUser.cs" />
     <Compile Include="Models\ICampingPlace.cs" />

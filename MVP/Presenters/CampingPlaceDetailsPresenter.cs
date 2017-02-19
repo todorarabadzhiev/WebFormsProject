@@ -7,8 +7,8 @@ namespace MVP.Presenters
 {
     public class CampingPlaceDetailsPresenter : Presenter<ICampingPlaceDetailsView>
     {
-        private readonly IDataProvider provider;
-        public CampingPlaceDetailsPresenter(ICampingPlaceDetailsView view, IDataProvider provider)
+        private readonly ICampingPlaceDataProvider provider;
+        public CampingPlaceDetailsPresenter(ICampingPlaceDetailsView view, ICampingPlaceDataProvider provider)
             : base(view)
         {
             this.provider = provider;

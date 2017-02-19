@@ -7,7 +7,10 @@ namespace CampingWebForms.App_Start.NinjectModules
     {
         public override void Load()
         {
-            this.Bind<IDataProvider>().To<CampingDbDataProvider>();
+            this.Bind<ICampingPlaceDataProvider>().To<CampingPlaceDataProvider>();
+            this.Bind<ICampingUserDataProvider>().To<CampingUserDataProvider>();
+            this.Bind<ISiteCategoryDataProvider>().To<SiteCategoryDataProvider>();
+            this.Bind<ISightseeingDataProvider>().To<SightseeingDataProvider>();
         }
     }
 }

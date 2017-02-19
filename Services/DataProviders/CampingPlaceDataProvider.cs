@@ -2,18 +2,16 @@
 using Services.Models;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Web;
 
 namespace Services.DataProviders
 {
-    public class CampingDbDataProvider : IDataProvider
+    public class CampingPlaceDataProvider : ICampingPlaceDataProvider
     {
         private readonly ICampingDBRepository repository;
         private readonly Func<IUnitOfWork> unitOfWork;
 
-        public CampingDbDataProvider(ICampingDBRepository repository, Func<IUnitOfWork> unitOfWork)
+        public CampingPlaceDataProvider(ICampingDBRepository repository, Func<IUnitOfWork> unitOfWork)
         {
             if (repository == null)
             {
@@ -26,25 +24,6 @@ namespace Services.DataProviders
 
             this.repository = repository;
             this.unitOfWork = unitOfWork;
-        }
-
-        public void AddCampingUser(string appUserId, string firstName,
-            string lastName, string userName)
-        {
-            IGenericRepository<CampingDB.Models.CampingUser> capmingUserRepository =
-                this.repository.GetCampingUserRepository();
-            ICampingUser newCampingUser = new CampingUser();
-            newCampingUser.ApplicationUserId = appUserId;
-            newCampingUser.FirstName = firstName;
-            newCampingUser.LastName = lastName;
-            newCampingUser.UserName = userName;
-
-            using (var uw = this.unitOfWork())
-            {
-                CampingDB.Models.CampingUser dbCampingUser = ConvertFromUser(newCampingUser);
-                capmingUserRepository.Add(dbCampingUser);
-                uw.Commit();
-            }
         }
 
         public void AddCampingPlace(
@@ -118,34 +97,6 @@ namespace Services.DataProviders
             return places;
         }
 
-        public IEnumerable<ISiteCategory> GetAllSiteCategories()
-        {
-            IGenericRepository<CampingDB.Models.SiteCategory> siteCategoryRepository =
-                this.repository.GetSiteCategoryRepository();
-            var categories = new List<ISiteCategory>();
-            var dbCategories = siteCategoryRepository.GetAll();
-            foreach (var c in dbCategories)
-            {
-                categories.Add(ConvertToCategory(c));
-            }
-
-            return categories;
-        }
-
-        public IEnumerable<ISightseeing> GetAllSightseeings()
-        {
-            IGenericRepository<CampingDB.Models.Sightseeing> sightseeingRepository =
-                this.repository.GetSightseeingRepository();
-            var sightseeings = new List<ISightseeing>();
-            var dbSightseeings = sightseeingRepository.GetAll();
-            foreach (var s in dbSightseeings)
-            {
-                sightseeings.Add(ConvertToSightseeeing(s));
-            }
-
-            return sightseeings;
-        }
-
         private ICollection<CampingDB.Models.ImageFile> GetImageFiles(IList<string> imageFileNames, IList<byte[]> imageFilesData)
         {
             if (imageFileNames == null || imageFilesData == null)
@@ -164,18 +115,6 @@ namespace Services.DataProviders
             }
 
             return dbFiles;
-        }
-
-        private CampingDB.Models.CampingUser ConvertFromUser(ICampingUser campUser)
-        {
-            CampingDB.Models.CampingUser user = new CampingDB.Models.CampingUser();
-            user.ApplicationUserId = campUser.ApplicationUserId;
-            user.FirstName = campUser.FirstName;
-            user.LastName = campUser.LastName;
-            user.UserName = campUser.UserName;
-            user.RegisteredOn = DateTime.Now;
-
-            return user;
         }
 
         private CampingDB.Models.CampingPlace ConvertFromPlace(ICampingPlace p)
@@ -245,24 +184,6 @@ namespace Services.DataProviders
             place.ImageFiles = imageFiles;
 
             return place;
-        }
-
-        private ISiteCategory ConvertToCategory(CampingDB.Models.SiteCategory c)
-        {
-            ISiteCategory category = new SiteCategory();
-            category.Name = c.Name;
-            category.Id = c.Id;
-
-            return category;
-        }
-
-        private ISightseeing ConvertToSightseeeing(CampingDB.Models.Sightseeing s)
-        {
-            ISightseeing sightseeing = new Sightseeing();
-            sightseeing.Name = s.Name;
-            sightseeing.Id = s.Id;
-
-            return sightseeing;
         }
     }
 }

@@ -7,8 +7,8 @@ namespace MVP.Presenters
 {
     public class HomePresenter : Presenter<IHomeView>
     {
-        private readonly IDataProvider provider;
-        public HomePresenter(IHomeView view, IDataProvider provider)
+        private readonly ICampingPlaceDataProvider provider;
+        public HomePresenter(IHomeView view, ICampingPlaceDataProvider provider)
             : base(view)
         {
             this.provider = provider;
