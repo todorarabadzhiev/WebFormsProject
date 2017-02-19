@@ -221,7 +221,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="AddCampingPlace.aspx" />
+    <Content Include="User\AddCampingPlace.aspx" />
     <Content Include="CampingPlaceDetails.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-united.css" />
@@ -394,11 +394,11 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddCampingPlace.aspx.cs">
+    <Compile Include="User\AddCampingPlace.aspx.cs">
       <DependentUpon>AddCampingPlace.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddCampingPlace.aspx.designer.cs">
+    <Compile Include="User\AddCampingPlace.aspx.designer.cs">
       <DependentUpon>AddCampingPlace.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -472,7 +472,9 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Admin\" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

@@ -10,6 +10,7 @@ namespace Services.DataProviders
         IEnumerable<ICampingPlace> GetAllCampingPlaces();
         IEnumerable<ISiteCategory> GetAllSiteCategories();
         IEnumerable<ISightseeing> GetAllSightseeings();
+        IEnumerable<ICampingPlace> GetLatestCampingPlaces(int count);
         IEnumerable<ICampingPlace> GetCampingPlaceById(Guid id);
         void AddCampingPlace(string name, string description, string googleMapsUrl,
                 bool hasWater, IEnumerable<string> sightseeingNames, IEnumerable<string> siteCategoryNames,

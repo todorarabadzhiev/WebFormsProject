@@ -18,7 +18,7 @@ namespace MVP.Presenters
 
         private void View_HomeLoad(object sender, EventArgs e)
         {
-            this.View.Model.CampingPlaces = this.provider.GetAllCampingPlaces();
+            this.View.Model.CampingPlaces = this.provider.GetLatestCampingPlaces(3);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace Services.DataProviders
             this.unitOfWork = unitOfWork;
         }
 
-        public void AddCampingUser(string appUserId, string firstName, 
+        public void AddCampingUser(string appUserId, string firstName,
             string lastName, string userName)
         {
             IGenericRepository<CampingDB.Models.CampingUser> capmingUserRepository =
@@ -79,6 +79,27 @@ namespace Services.DataProviders
             var places = new List<ICampingPlace>();
             var dbPlace = capmingPlaceRepository.GetById(id);
             places.Add(ConvertToPlace(dbPlace));
+
+            return places;
+        }
+
+        public IEnumerable<ICampingPlace> GetLatestCampingPlaces(int count)
+        {
+            IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository =
+                this.repository.GetCampingPlaceRepository();
+            var places = new List<ICampingPlace>();
+            var dbPlaces = capmingPlaceRepository.GetAll(null, p => p.AddedOn);
+
+            int counter = 0;
+            int total = dbPlaces.Count();
+            foreach (var p in dbPlaces)
+            {
+                counter++;
+                if (counter > total - count)
+                {
+                    places.Add(ConvertToPlace(p));
+                }
+            }
 
             return places;
         }

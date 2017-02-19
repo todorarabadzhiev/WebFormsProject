@@ -10,24 +10,22 @@
         </p>
     </div>
 
-    <div class="row">
+    <div>
         <asp:ListView ID="ListViewLatestPlaces" runat="server">
             <LayoutTemplate>
                 <h2 class="text-center">Последни споделени местенца</h2>
-                <table>
-                    <tr>
-                        <asp:PlaceHolder ID="itemPlaceholder" runat="server"></asp:PlaceHolder>
-                    </tr>
-                </table>
+                <div class="container">
+                    <asp:PlaceHolder ID="ItemPlaceholder" runat="server" />
+                </div>
             </LayoutTemplate>
 
             <ItemTemplate>
-                <td class="col-md-2">
-                    <asp:Image ImageUrl='<%# ConvertToImage(Eval("ImageFiles[0].Data")) %>' runat="server" Width="150px" />
-                    <asp:HyperLink runat="server" ID="hlDetails"
-                        NavigateUrl='<%# "CampingPlaceDetails.aspx?id=" + Eval("Id") %>' Text='<%# Eval("Name") %>'>
-                    </asp:HyperLink>
-                </td>
+                <div class="col-md-4 text-center">
+                    <asp:Image ImageUrl='<%# ConvertToImage(Eval("ImageFiles[0].Data")) %>'
+                        runat="server" Width="200px" /><br />
+                    <asp:HyperLink runat="server" ID="hlDetails" Text='<%# Eval("Name") %>'
+                        NavigateUrl='<%# "CampingPlaceDetails.aspx?id=" + Eval("Id") %>' />
+                </div>
             </ItemTemplate>
 
         </asp:ListView>

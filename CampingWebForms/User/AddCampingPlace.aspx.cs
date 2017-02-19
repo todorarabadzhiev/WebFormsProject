@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 using WebFormsMvp;
 using WebFormsMvp.Web;
 
-namespace CampingWebForms
+namespace User.CampingWebForms
 {
     [PresenterBinding(typeof(AddCampingPlacePresenter))]
     public partial class AddCampingPlace : MvpPage<AddCampingPlaceViewModel>, IAddCampingPlaceView
