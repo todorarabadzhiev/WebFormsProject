@@ -221,8 +221,9 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Admin\EditUsers.aspx" />
     <Content Include="User\AddCampingPlace.aspx" />
-    <Content Include="CampingPlaceDetails.aspx" />
+    <Content Include="User\CampingPlaceDetails.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-united.css" />
     <Content Include="Content\bootstrap-united.min.css" />
@@ -272,6 +273,7 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="SiteCategories.aspx" />
+    <Content Include="User\MyCampingPlaces.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -394,6 +396,13 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\EditUsers.aspx.cs">
+      <DependentUpon>EditUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditUsers.aspx.designer.cs">
+      <DependentUpon>EditUsers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User\AddCampingPlace.aspx.cs">
       <DependentUpon>AddCampingPlace.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -417,11 +426,11 @@
     <Compile Include="App_Start\NinjectWeb.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="CampingPlaceDetails.aspx.cs">
+    <Compile Include="User\CampingPlaceDetails.aspx.cs">
       <DependentUpon>CampingPlaceDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CampingPlaceDetails.aspx.designer.cs">
+    <Compile Include="User\CampingPlaceDetails.aspx.designer.cs">
       <DependentUpon>CampingPlaceDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Common\Utilities.cs" />
@@ -464,6 +473,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="User\MyCampingPlaces.aspx.cs">
+      <DependentUpon>MyCampingPlaces.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MyCampingPlaces.aspx.designer.cs">
+      <DependentUpon>MyCampingPlaces.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -472,9 +488,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

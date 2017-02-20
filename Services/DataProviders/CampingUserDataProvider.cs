@@ -1,6 +1,7 @@
 ﻿using Repositories;
 using Services.Models;
 using System;
+using System.Collections.Generic;
 
 namespace Services.DataProviders
 {
@@ -41,6 +42,36 @@ namespace Services.DataProviders
                 capmingUserRepository.Add(dbCampingUser);
                 uw.Commit();
             }
+        }
+
+        public IEnumerable<ICampingUser> GetAllCampingUsers()
+        {
+            IGenericRepository<CampingDB.Models.CampingUser> capmingUserRepository =
+                this.repository.GetCampingUserRepository();
+            var dbUsers = capmingUserRepository.GetAll();
+            IList<ICampingUser> users = new List<ICampingUser>();
+            foreach (var dbUser in dbUsers)
+            {
+                ICampingUser user = ConvertToUser(dbUser);
+                users.Add(user);
+            }
+
+            return users;
+        }
+
+        private ICampingUser ConvertToUser(CampingDB.Models.CampingUser dbUser)
+        {
+            ICampingUser user = new CampingUser();
+            user.ApplicationUserId = dbUser.ApplicationUserId;
+            user.FirstName = dbUser.FirstName;
+            user.LastName = dbUser.LastName;
+            user.RegisteredOn = dbUser.RegisteredOn;
+            user.Id = dbUser.Id;
+            user.UserName = dbUser.UserName;
+
+            //user.MyCampingPlaces = 
+
+            return user;
         }
 
         private CampingDB.Models.CampingUser ConvertFromUser(ICampingUser campUser)

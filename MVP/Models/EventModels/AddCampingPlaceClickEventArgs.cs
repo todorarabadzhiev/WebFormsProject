@@ -8,6 +8,7 @@ namespace MVP.Models.EventModels
     public class AddCampingPlaceClickEventArgs : EventArgs
     {
         public string Name { get; private set; }
+        public string AddedBy { get; private set; }
         public string Description { get; private set; }
         public string GoogleMapsUrl { get; private set; }
         public bool HasWater { get; private set; }
@@ -18,6 +19,7 @@ namespace MVP.Models.EventModels
 
         public AddCampingPlaceClickEventArgs(
             string name,
+            string addedBy,
             string description,
             string googleMapsUrl,
             bool waterOnSite,
@@ -27,6 +29,7 @@ namespace MVP.Models.EventModels
             IList<byte[]> imageFilesData)
         {
             this.Name = name;
+            this.AddedBy = addedBy;
             this.Description = description;
             this.GoogleMapsUrl = googleMapsUrl;
             this.HasWater = waterOnSite;

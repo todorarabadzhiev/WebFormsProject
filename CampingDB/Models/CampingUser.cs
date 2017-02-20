@@ -7,13 +7,13 @@ namespace CampingDB.Models
 {
     public class CampingUser
     {
-        private ICollection<CampingPlace> myCampingPlaces;
         private ICollection<CampingPlace> favoriteCampingPlaces;
+        private ICollection<CampingPlace> addedCampingPlaces;
 
         public CampingUser()
         {
-            this.myCampingPlaces = new HashSet<CampingPlace>();
             this.favoriteCampingPlaces = new HashSet<CampingPlace>();
+            this.addedCampingPlaces = new HashSet<CampingPlace>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -34,18 +34,17 @@ namespace CampingDB.Models
         public string UserName { get; set; }
         public DateTime RegisteredOn { get; set; }
 
-        public virtual ICollection<CampingPlace> MyCampingPlaces
+        public virtual ICollection<CampingPlace> AddedCampingPlaces
         {
             get
             {
-                return this.myCampingPlaces;
+                return this.addedCampingPlaces;
             }
             set
             {
-                this.myCampingPlaces = value;
+                this.addedCampingPlaces = value;
             }
         }
-
         public virtual ICollection<CampingPlace> FavoriteCampingPlaces
         {
             get

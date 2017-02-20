@@ -16,7 +16,7 @@ namespace MVP.Presenters
             this.View.CampingPlaceDetailsLoad += this.View_CampingPlaceDetailsLoad;
         }
 
-        private void View_CampingPlaceDetailsLoad(object sender, CampingPlaceDetailsEventArgs e)
+        private void View_CampingPlaceDetailsLoad(object sender, IdEventArgs e)
         {
             this.View.Model.CampingPlaceDetails = this.provider.GetCampingPlaceById(e.Id);
         }

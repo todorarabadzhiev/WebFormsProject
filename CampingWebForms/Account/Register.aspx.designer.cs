@@ -40,15 +40,6 @@ namespace CampingWebForms.Account {
         protected global::System.Web.UI.WebControls.TextBox TextBoxLastName;
         
         /// <summary>
-        /// TextBoxUserName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxUserName;
-        
-        /// <summary>
         /// Email control.
         /// </summary>
         /// <remarks>

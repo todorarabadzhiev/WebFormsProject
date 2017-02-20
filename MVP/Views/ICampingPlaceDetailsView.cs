@@ -7,6 +7,6 @@ namespace MVP.Views
 {
     public interface ICampingPlaceDetailsView : IView<CampingPlaceDetailsViewModel>
     {
-        event EventHandler<CampingPlaceDetailsEventArgs> CampingPlaceDetailsLoad;
+        event EventHandler<IdEventArgs> CampingPlaceDetailsLoad;
     }
 }

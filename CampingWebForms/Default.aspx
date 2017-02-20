@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1 class="text-center">Диваци Айляци</h1>
+        <h1 class="text-center">Биваци</h1>
         <p class="lead">
             Нашето приложение има за цел споделяне на информация за интересни места, подходящи за 
             диво къмпингуване.
@@ -24,7 +24,7 @@
                     <asp:Image ImageUrl='<%# ConvertToImage(Eval("ImageFiles[0].Data")) %>'
                         runat="server" Width="200px" /><br />
                     <asp:HyperLink runat="server" ID="hlDetails" Text='<%# Eval("Name") %>'
-                        NavigateUrl='<%# "CampingPlaceDetails.aspx?id=" + Eval("Id") %>' />
+                        NavigateUrl='<%# "User/CampingPlaceDetails.aspx?id=" + Eval("Id") %>' />
                 </div>
             </ItemTemplate>
 

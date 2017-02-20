@@ -30,8 +30,9 @@ namespace CampingDB.Models
 
         [Required]
         public bool WaterOnSite { get; set; }
+        public bool IsDeleted { get; set; }
         public DateTime AddedOn { get; set; }
-        public CampingUser AddedBy { get; set; }
+        public virtual CampingUser AddedBy { get; set; }
 
         public virtual ICollection<SiteCategory> SiteCategories
         {

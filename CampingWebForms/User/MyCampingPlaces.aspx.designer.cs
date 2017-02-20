@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CampingWebForms {
+namespace CampingWebForms.User {
     
     
-    public partial class CampingPlaceDetails {
+    public partial class MyCampingPlaces {
         
         /// <summary>
-        /// DetailsView control.
+        /// ListViewMyPlaces control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView DetailsView;
+        protected global::System.Web.UI.WebControls.ListView ListViewMyPlaces;
     }
 }

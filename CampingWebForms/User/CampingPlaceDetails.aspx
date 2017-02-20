@@ -1,13 +1,14 @@
-﻿<%@ Page Title="Място" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CampingPlaceDetails.aspx.cs" Inherits="CampingWebForms.CampingPlaceDetails" %>
+﻿<%@ Page Title="Място" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CampingPlaceDetails.aspx.cs" Inherits="User.CampingWebForms.CampingPlaceDetails" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <asp:FormView runat="server" ID="DetailsView" CssClass="container text-center">
         <HeaderTemplate>
             <h1 class="text-center"><%# Eval("Name") %></h1>
+            <h5 class="text-center">Добавено от <i><%# Eval("AddedBy") %></i> на <%# Eval("AddedOn") %></h5>
         </HeaderTemplate>
         <ItemTemplate>
             <asp:HyperLink runat="server" NavigateUrl='<%# Eval("GoogleMapsUrl") %>'
-                Target="_blank" Text="See on Google maps" CssClass="text-center">
+                Target="_blank" Text="Виж на картата" CssClass="text-center">
             </asp:HyperLink>
             <h3 class="text-center">Кратко описание</h3>
             <p><%# Eval("Description") %></p>
@@ -29,4 +30,7 @@
             </asp:Repeater>
         </ItemTemplate>
     </asp:FormView>
+    <div class="back-link">
+        <a href="/">Назад</a>
+    </div>
 </asp:Content>

@@ -2,10 +2,10 @@
 
 namespace MVP.Models.EventModels
 {
-    public class CampingPlaceDetailsEventArgs : EventArgs
+    public class IdEventArgs : EventArgs
     {
         public Guid Id { get; private set; }
-        public CampingPlaceDetailsEventArgs(Guid id)
+        public IdEventArgs(Guid id)
         {
             this.Id = id;
         }

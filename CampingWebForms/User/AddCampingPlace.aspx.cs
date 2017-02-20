@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Web;
 using System.Web.UI.WebControls;
 using WebFormsMvp;
 using WebFormsMvp.Web;
@@ -51,6 +52,7 @@ namespace User.CampingWebForms
             if (Session[ImgUrls] != null)
             {
                 string name = this.TextBoxName.Text;
+                string addedBy = HttpContext.Current.User.Identity.Name;
                 string description = this.TextBoxDescription.Text;
                 string googleMapsUrl = this.TextBoxGoogleMapsUrl.Text;
                 bool hasWater = this.CheckBoxHasWater.Checked;
@@ -61,7 +63,7 @@ namespace User.CampingWebForms
                 IList<byte[]> imageFilesData = this.GetImageFilesData(imageFileNames);
 
                 AddCampingPlaceClickEventArgs args = new AddCampingPlaceClickEventArgs(
-                    name, description, googleMapsUrl, hasWater, sightseeingNames,
+                    name, addedBy, description, googleMapsUrl, hasWater, sightseeingNames,
                     siteCategoryNames, imageFileNames, imageFilesData);
                 this.AddCampingPlaceClick?.Invoke(sender, args);
                 Response.Redirect("~/");
@@ -97,7 +99,10 @@ namespace User.CampingWebForms
 
                     itemData.Add(new { Name = name, Data = Utilities.ConvertToImage(data) });
                 }
+
                 this.FilesCount.InnerText = string.Format("Добавени {0} изображения:", fileList.Count);
+
+
                 this.UploadedImgFiles.DataSource = itemData;
                 this.UploadedImgFiles.DataBind();
             }

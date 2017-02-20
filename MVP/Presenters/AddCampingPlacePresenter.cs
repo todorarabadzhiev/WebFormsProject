@@ -25,7 +25,7 @@ namespace MVP.Presenters
 
         private void View_AddCampingPlaceClick(object sender, AddCampingPlaceClickEventArgs e)
         {
-            this.campingPlaceProvider.AddCampingPlace(e.Name, e.Description, e.GoogleMapsUrl,
+            this.campingPlaceProvider.AddCampingPlace(e.Name, e.AddedBy, e.Description, e.GoogleMapsUrl,
                 e.HasWater, e.SightseeingNames, e.SiteCategoryNames, 
                 e.ImageFileNames, e.ImageFilesData);
         }

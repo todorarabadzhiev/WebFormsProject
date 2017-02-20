@@ -7,9 +7,11 @@ namespace Services.Models
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+        public string AddedBy { get; set; }
         public string Description { get; set; }
         public string GoogleMapsUrl { get; set; }
         public bool HasWater { get; set; }
+        public bool IsDeleted { get; set; }
         public DateTime AddedOn { get; set; }
         public IEnumerable<Guid> SightseeingIds { get; set; }
         public IEnumerable<Guid> SiteCategoriesIds { get; set; }

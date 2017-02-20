@@ -26,9 +26,22 @@ namespace Services.DataProviders
             this.unitOfWork = unitOfWork;
         }
 
+        public IEnumerable<ICampingPlace> GetUserCampingPlaces(string userName)
+        {
+            IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository =
+                this.repository.GetCampingPlaceRepository();
+            var places = new List<ICampingPlace>();
+            var dbPlaces = capmingPlaceRepository.GetAll(p => (!p.IsDeleted) && (p.AddedBy.UserName == userName));
+            foreach (var p in dbPlaces)
+            {
+                places.Add(ConvertToPlace(p));
+            }
+
+            return places;
+        }
+
         public void AddCampingPlace(
-            string name, string description,
-            string googleMapsUrl, bool hasWater,
+            string name, string addedBy, string description, string googleMapsUrl, bool hasWater,
             IEnumerable<string> sightseeingNames, IEnumerable<string> siteCategoryNames,
             IList<string> imageFileNames, IList<byte[]> imageFilesData)
         {
@@ -36,6 +49,7 @@ namespace Services.DataProviders
                 this.repository.GetCampingPlaceRepository();
             ICampingPlace newCampingPlace = new CampingPlace();
             newCampingPlace.Name = name;
+            newCampingPlace.AddedBy = addedBy;
             newCampingPlace.Description = description;
             newCampingPlace.GoogleMapsUrl = googleMapsUrl;
             newCampingPlace.HasWater = hasWater;
@@ -51,12 +65,32 @@ namespace Services.DataProviders
             }
         }
 
+        public void DeleteCampingPlace(Guid id)
+        {
+            IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository =
+                this.repository.GetCampingPlaceRepository();
+            var dbPlace = capmingPlaceRepository.GetById(id);
+            if (dbPlace != null)
+            {
+                using (var uw = this.unitOfWork())
+                {
+                    dbPlace.IsDeleted = true;
+                    uw.Commit();
+                }
+            }
+        }
+
         public IEnumerable<ICampingPlace> GetCampingPlaceById(Guid id)
         {
             IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository =
                 this.repository.GetCampingPlaceRepository();
-            var places = new List<ICampingPlace>();
             var dbPlace = capmingPlaceRepository.GetById(id);
+            if (dbPlace == null || dbPlace.IsDeleted)
+            {
+                return null;
+            }
+
+            var places = new List<ICampingPlace>();
             places.Add(ConvertToPlace(dbPlace));
 
             return places;
@@ -67,7 +101,12 @@ namespace Services.DataProviders
             IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository =
                 this.repository.GetCampingPlaceRepository();
             var places = new List<ICampingPlace>();
-            var dbPlaces = capmingPlaceRepository.GetAll(null, p => p.AddedOn);
+            var dbPlaces = capmingPlaceRepository.GetAll(p => !p.IsDeleted, p => p.AddedOn);
+
+            if (dbPlaces == null)
+            {
+                return null;
+            }
 
             int counter = 0;
             int total = dbPlaces.Count();
@@ -88,7 +127,12 @@ namespace Services.DataProviders
             IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository =
                 this.repository.GetCampingPlaceRepository();
             var places = new List<ICampingPlace>();
-            var dbPlaces = capmingPlaceRepository.GetAll();
+            var dbPlaces = capmingPlaceRepository.GetAll(p => !p.IsDeleted);
+            if (dbPlaces == null)
+            {
+                return null;
+            }
+
             foreach (var p in dbPlaces)
             {
                 places.Add(ConvertToPlace(p));
@@ -125,6 +169,11 @@ namespace Services.DataProviders
             place.GoogleMapsUrl = p.GoogleMapsUrl;
             place.WaterOnSite = p.HasWater;
             place.AddedOn = DateTime.Now;
+            place.IsDeleted = p.IsDeleted;
+
+            IGenericRepository<CampingDB.Models.CampingUser> campingUserRepository =
+                this.repository.GetCampingUserRepository();
+            place.AddedBy = campingUserRepository.GetAll(u => u.UserName == p.AddedBy).FirstOrDefault();
 
             IGenericRepository<CampingDB.Models.Sightseeing> sightseeingRepository =
                 this.repository.GetSightseeingRepository();
@@ -141,9 +190,12 @@ namespace Services.DataProviders
             ICampingPlace place = new CampingPlace();
             place.Name = p.Name;
             place.Id = p.Id;
+            place.AddedBy = p.AddedBy.FirstName + " " + p.AddedBy.LastName;
+            place.AddedOn = p.AddedOn;
             place.Description = p.Description;
             place.GoogleMapsUrl = p.GoogleMapsUrl;
             place.HasWater = p.WaterOnSite;
+            place.IsDeleted = p.IsDeleted;
 
             List<Guid> sightseeingIds = new List<Guid>();
             List<string> sightseeingNames = new List<string>();
