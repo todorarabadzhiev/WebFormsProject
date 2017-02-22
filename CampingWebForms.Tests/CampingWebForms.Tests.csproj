@@ -72,12 +72,20 @@
       <HintPath>..\packages\JustMock.2016.2.426.1\lib\Net35\Telerik.JustMock.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="WebFormsMvp, Version=1.4.5.0, Culture=neutral, PublicKeyToken=537f18701145dff0, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebFormsMvp.1.4.5.0\lib\WebFormsMvp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mocked\AddCampingPlacePresenterMock.cs" />
     <Compile Include="Mocked\CampingPlaceDataProviderMock.cs" />
     <Compile Include="Mocked\CampingUserDataProviderMock.cs" />
     <Compile Include="Mocked\SightseeingDataProviderMock.cs" />
     <Compile Include="Mocked\SiteCategoryDataProviderMock.cs" />
+    <Compile Include="MVP\Presenters\AddCampingPlacePresenterClass\Constructor_Should.cs" />
+    <Compile Include="MVP\Presenters\AddCampingPlacePresenterClass\View_AddCampingPlaceClick_Should.cs" />
+    <Compile Include="MVP\Presenters\AddCampingPlacePresenterClass\View_AddCampingPlaceLoad_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DataProviders\CampingPlaceDataProviderClass\AddCampingPlace_Should.cs" />
     <Compile Include="Services\DataProviders\CampingPlaceDataProviderClass\Constructor_Should.cs" />
@@ -102,6 +110,10 @@
     <ProjectReference Include="..\CampingWebForms\CampingWebForms.csproj">
       <Project>{5C056264-2670-428B-8373-7E9DCECE1C39}</Project>
       <Name>CampingWebForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVP\MVP.csproj">
+      <Project>{26EF8270-FFFB-4D08-9676-3889757B2DE3}</Project>
+      <Name>MVP</Name>
     </ProjectReference>
     <ProjectReference Include="..\Repositories\Repositories.csproj">
       <Project>{E89D85A8-B59B-4051-B7D9-07CB72F567DB}</Project>

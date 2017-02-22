@@ -8,13 +8,29 @@ namespace MVP.Presenters
 {
     public class AddCampingPlacePresenter : Presenter<IAddCampingPlaceView>
     {
-        private readonly ICampingPlaceDataProvider campingPlaceProvider;
-        private readonly ISightseeingDataProvider sightseeingProvider;
-        private readonly ISiteCategoryDataProvider siteCategoryProvider;
+        protected readonly ICampingPlaceDataProvider campingPlaceProvider;
+        protected readonly ISightseeingDataProvider sightseeingProvider;
+        protected readonly ISiteCategoryDataProvider siteCategoryProvider;
+
         public AddCampingPlacePresenter(IAddCampingPlaceView view, ICampingPlaceDataProvider campingPlaceProvider,
             ISightseeingDataProvider sightseeingProvider, ISiteCategoryDataProvider siteCategoryProvider)
             : base(view)
         {
+            if (campingPlaceProvider == null)
+            {
+                throw new ArgumentNullException("CampingPlaceProvider");
+            }
+
+            if (siteCategoryProvider == null)
+            {
+                throw new ArgumentNullException("SiteCategoryProvider");
+            }
+
+            if (sightseeingProvider == null)
+            {
+                throw new ArgumentNullException("SightseeingProvider");
+            }
+
             this.campingPlaceProvider = campingPlaceProvider;
             this.sightseeingProvider = sightseeingProvider;
             this.siteCategoryProvider = siteCategoryProvider;
