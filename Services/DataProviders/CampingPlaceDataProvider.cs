@@ -8,8 +8,8 @@ namespace Services.DataProviders
 {
     public class CampingPlaceDataProvider : ICampingPlaceDataProvider
     {
-        private readonly ICampingDBRepository repository;
-        private readonly Func<IUnitOfWork> unitOfWork;
+        protected readonly ICampingDBRepository repository;
+        protected readonly Func<IUnitOfWork> unitOfWork;
 
         public CampingPlaceDataProvider(ICampingDBRepository repository, Func<IUnitOfWork> unitOfWork)
         {
@@ -28,6 +28,11 @@ namespace Services.DataProviders
 
         public IEnumerable<ICampingPlace> GetUserCampingPlaces(string userName)
         {
+            if (userName == null)
+            {
+                return null;
+            }
+
             IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository =
                 this.repository.GetCampingPlaceRepository();
             var places = new List<ICampingPlace>();
@@ -45,6 +50,29 @@ namespace Services.DataProviders
             IEnumerable<string> sightseeingNames, IEnumerable<string> siteCategoryNames,
             IList<string> imageFileNames, IList<byte[]> imageFilesData)
         {
+            if (name == null)
+            {
+                throw new ArgumentNullException("CampingPlaceName");
+            }
+
+            if (addedBy == null)
+            {
+                throw new ArgumentNullException("UserName");
+            }
+
+            if (imageFileNames == null || 
+                !imageFileNames.GetEnumerator().MoveNext() ||
+                imageFilesData == null ||
+                !imageFilesData.GetEnumerator().MoveNext())
+            {
+                throw new ArgumentNullException("CampingPlace ImageFiles");
+            }
+
+            if (imageFileNames.Count != imageFilesData.Count)
+            {
+                throw new ArgumentException("CampingPlace ImageFiles Names vs Data");
+            }
+
             IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository =
                 this.repository.GetCampingPlaceRepository();
             ICampingPlace newCampingPlace = new CampingPlace();
@@ -98,6 +126,11 @@ namespace Services.DataProviders
 
         public IEnumerable<ICampingPlace> GetLatestCampingPlaces(int count)
         {
+            if (count <= 0)
+            {
+                return (null);
+            }
+
             IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository =
                 this.repository.GetCampingPlaceRepository();
             var places = new List<ICampingPlace>();
@@ -126,13 +159,13 @@ namespace Services.DataProviders
         {
             IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository =
                 this.repository.GetCampingPlaceRepository();
-            var places = new List<ICampingPlace>();
             var dbPlaces = capmingPlaceRepository.GetAll(p => !p.IsDeleted);
             if (dbPlaces == null)
             {
                 return null;
             }
 
+            var places = new List<ICampingPlace>();
             foreach (var p in dbPlaces)
             {
                 places.Add(ConvertToPlace(p));

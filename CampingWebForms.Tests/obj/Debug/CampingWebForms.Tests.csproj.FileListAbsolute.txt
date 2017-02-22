@@ -15,7 +15,6 @@ C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCampin
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\CampingWebForms.Tests.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\CampingWebForms.Tests.pdb
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\CampingWebForms.dll
-C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\WebActivatorEx.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.Owin.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Ninject.dll
@@ -68,3 +67,7 @@ C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCampin
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.dll
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\nunit.framework.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Telerik.JustMock.dll
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\nunit.framework.xml
+C:\Users\Todor\Documents\Visual Studio 2015\Projects\WebForms\project\WildCamping\CampingWebForms.Tests\bin\Debug\Telerik.JustMock.xml

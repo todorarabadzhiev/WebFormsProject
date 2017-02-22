@@ -7,8 +7,8 @@ namespace Services.DataProviders
 {
     public class SightseeingDataProvider : ISightseeingDataProvider
     {
-        private readonly ICampingDBRepository repository;
-        private readonly Func<IUnitOfWork> unitOfWork;
+        protected readonly ICampingDBRepository repository;
+        protected readonly Func<IUnitOfWork> unitOfWork;
 
         public SightseeingDataProvider(ICampingDBRepository repository, Func<IUnitOfWork> unitOfWork)
         {
@@ -29,8 +29,13 @@ namespace Services.DataProviders
         {
             IGenericRepository<CampingDB.Models.Sightseeing> sightseeingRepository =
                 this.repository.GetSightseeingRepository();
-            var sightseeings = new List<ISightseeing>();
             var dbSightseeings = sightseeingRepository.GetAll();
+            if (dbSightseeings == null)
+            {
+                return null;
+            }
+
+            var sightseeings = new List<ISightseeing>();
             foreach (var s in dbSightseeings)
             {
                 sightseeings.Add(ConvertToSightseeeing(s));

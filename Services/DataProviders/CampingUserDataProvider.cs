@@ -7,8 +7,8 @@ namespace Services.DataProviders
 {
     public class CampingUserDataProvider : ICampingUserDataProvider
     {
-        private readonly ICampingDBRepository repository;
-        private readonly Func<IUnitOfWork> unitOfWork;
+        protected readonly ICampingDBRepository repository;
+        protected readonly Func<IUnitOfWork> unitOfWork;
 
         public CampingUserDataProvider(ICampingDBRepository repository, Func<IUnitOfWork> unitOfWork)
         {
@@ -28,6 +28,26 @@ namespace Services.DataProviders
         public void AddCampingUser(string appUserId, string firstName,
             string lastName, string userName)
         {
+            if (firstName == null)
+            {
+                throw new ArgumentNullException("FirstName");
+            }
+
+            if (lastName == null)
+            {
+                throw new ArgumentNullException("LastName");
+            }
+
+            if (userName == null)
+            {
+                throw new ArgumentNullException("UserName");
+            }
+
+            if (appUserId == null)
+            {
+                throw new ArgumentNullException("ApplicationUserId");
+            }
+
             IGenericRepository<CampingDB.Models.CampingUser> capmingUserRepository =
                 this.repository.GetCampingUserRepository();
             ICampingUser newCampingUser = new CampingUser();
@@ -49,6 +69,11 @@ namespace Services.DataProviders
             IGenericRepository<CampingDB.Models.CampingUser> capmingUserRepository =
                 this.repository.GetCampingUserRepository();
             var dbUsers = capmingUserRepository.GetAll();
+            if (dbUsers == null)
+            {
+                return null;
+            }
+
             IList<ICampingUser> users = new List<ICampingUser>();
             foreach (var dbUser in dbUsers)
             {
@@ -69,7 +94,7 @@ namespace Services.DataProviders
             user.Id = dbUser.Id;
             user.UserName = dbUser.UserName;
 
-            //user.MyCampingPlaces = 
+            //user.MyCampingPlaces = dbUser.AddedCampingPlaces;
 
             return user;
         }

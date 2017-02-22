@@ -8,7 +8,7 @@
 
     <div>
         <asp:GridView ID="EditUsersContol" runat="server" AutoGenerateColumns="False" 
-            AllowPaging="True" DataKeyNames="ID"
+            AllowPaging="True" DataKeyNames="ID" PageSize="5"
             onpageindexchanging="EditUsersContol_PageIndexChanging">
             <Columns>
                 <asp:CommandField ShowSelectButton="True" />

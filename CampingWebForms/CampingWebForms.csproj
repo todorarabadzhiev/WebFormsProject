@@ -222,6 +222,12 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Admin\EditUsers.aspx" />
+    <Content Include="Components\CampingPlaceImagesControl.ascx" />
+    <Content Include="Components\AddCampingPlaceControl.ascx" />
+    <Content Include="HttpErrors\400.html" />
+    <Content Include="HttpErrors\403.html" />
+    <Content Include="HttpErrors\404.html" />
+    <Content Include="HttpErrors\500.html" />
     <Content Include="User\AddCampingPlace.aspx" />
     <Content Include="User\CampingPlaceDetails.aspx" />
     <Content Include="Contact.aspx" />
@@ -402,6 +408,27 @@
     </Compile>
     <Compile Include="Admin\EditUsers.aspx.designer.cs">
       <DependentUpon>EditUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\CampingPlaceImagesControl.ascx.cs">
+      <DependentUpon>CampingPlaceImagesControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\CampingPlaceImagesControl.ascx.designer.cs">
+      <DependentUpon>CampingPlaceImagesControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AddCampingPlaceControl.ascx.cs">
+      <DependentUpon>AddCampingPlaceControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\AddCampingPlaceControl.ascx.designer.cs">
+      <DependentUpon>AddCampingPlaceControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HttpErrors\500.aspx.cs">
+      <DependentUpon>500.html</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HttpErrors\500.aspx.designer.cs">
+      <DependentUpon>500.html</DependentUpon>
     </Compile>
     <Compile Include="User\AddCampingPlace.aspx.cs">
       <DependentUpon>AddCampingPlace.aspx</DependentUpon>

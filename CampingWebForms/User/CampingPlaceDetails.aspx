@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="Място" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CampingPlaceDetails.aspx.cs" Inherits="User.CampingWebForms.CampingPlaceDetails" %>
 
+<%--<%@ Register Src="~/Components/EditCampingPlaceControl.ascx" TagPrefix="my" TagName="EditCampingPlaceControl" %>--%>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:FormView runat="server" ID="DetailsView" CssClass="container text-center">
+    <asp:FormView runat="server" ID="DetailsView" CssClass="container text-center" >
         <HeaderTemplate>
             <h1 class="text-center"><%# Eval("Name") %></h1>
             <h5 class="text-center">Добавено от <i><%# Eval("AddedBy") %></i> на <%# Eval("AddedOn") %></h5>
@@ -29,7 +31,24 @@
                 </ItemTemplate>
             </asp:Repeater>
         </ItemTemplate>
+        <%--<EditItemTemplate>
+            <my:EditCampingPlaceControl ID="MyEditCampingPlaceControl" runat="server" />
+        </EditItemTemplate>--%>
     </asp:FormView>
+
+    <%--<asp:MultiView ID="MultiViewButtons" runat="server" ActiveViewIndex="0">
+        <asp:View ID="ViewNormalMode" runat="server">
+            <asp:LinkButton ID="LinkButtonEdit" runat="server"
+                OnClick="LinkButtonEdit_Click" Text="Редактирай" />
+        </asp:View>
+        <asp:View ID="ViewEditMode" runat="server">
+            <asp:LinkButton ID="LinkButtonSave" runat="server"
+                OnClick="LinkButtonSave_Click" Text="Запази" />
+            <asp:LinkButton ID="LinkButtonCancel" runat="server"
+                OnClick="LinkButtonCancel_Click" Text="Откажи" />
+        </asp:View>
+    </asp:MultiView>--%>
+
     <div class="back-link">
         <a href="/">Назад</a>
     </div>

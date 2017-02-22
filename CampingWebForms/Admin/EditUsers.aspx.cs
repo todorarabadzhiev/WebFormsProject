@@ -30,7 +30,7 @@ namespace CampingWebForms.Admin
         {
             this.EditUsersContol.PageIndex = e.NewPageIndex;
 
-            //this.EditUsersGetCampingUsers?.Invoke(sender, e);
+            this.EditUsersGetCampingUsers?.Invoke(sender, e);
             this.EditUsersContol.DataSource = this.Model.CampingUsers;
             this.EditUsersContol.DataBind();
         }

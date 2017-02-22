@@ -31,9 +31,9 @@
         </LayoutTemplate>
         <ItemTemplate>
             <tr>
-                <td><%#: Item.Name %></td>
+                <td><a href='CampingPlaceDetails.aspx?id=<%#: Item.Id %>'><%#: Item.Name %></a></td>
                 <td><%#: Item.Description %></td>
-                <td><%#: Item.GoogleMapsUrl %></td>
+                <td><a href='<%#: Item.GoogleMapsUrl %>'><%#: Item.GoogleMapsUrl %></a></td>
                 <td><%#: Item.HasWater ? "Да" : "Не" %></td>
                 <td>
                     <asp:LinkButton runat="server" ID="LinkButtonDelete" Text="Изтрий" CommandName="Delete" />

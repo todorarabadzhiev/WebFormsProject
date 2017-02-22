@@ -7,8 +7,8 @@ namespace Services.DataProviders
 {
     public class SiteCategoryDataProvider : ISiteCategoryDataProvider
     {
-        private readonly ICampingDBRepository repository;
-        private readonly Func<IUnitOfWork> unitOfWork;
+        protected readonly ICampingDBRepository repository;
+        protected readonly Func<IUnitOfWork> unitOfWork;
 
         public SiteCategoryDataProvider(ICampingDBRepository repository, Func<IUnitOfWork> unitOfWork)
         {
@@ -28,8 +28,13 @@ namespace Services.DataProviders
         {
             IGenericRepository<CampingDB.Models.SiteCategory> siteCategoryRepository =
                 this.repository.GetSiteCategoryRepository();
-            var categories = new List<ISiteCategory>();
             var dbCategories = siteCategoryRepository.GetAll();
+            if (dbCategories == null)
+            {
+                return null;
+            }
+
+            var categories = new List<ISiteCategory>();
             foreach (var c in dbCategories)
             {
                 categories.Add(ConvertToSiteCategory(c));
