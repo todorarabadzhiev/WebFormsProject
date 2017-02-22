@@ -25,6 +25,10 @@ namespace CampingWebForms.Tests.Services.DataProviders.CampingPlaceDataProviderC
         private string userName_02 = "User_02";
         private string userName_03 = "User_03";
 
+        private DateTime date_01 = new DateTime(2000, 1, 1);
+        private DateTime date_02 = new DateTime(2005, 1, 1);
+        private DateTime date_03 = new DateTime(2010, 1, 1);
+
         [TestCase(0)]
         [TestCase(-3)]
         public void ReturnsNull_WhenTheProvidedCountIsNotPositive(int count)
@@ -115,7 +119,7 @@ namespace CampingWebForms.Tests.Services.DataProviders.CampingPlaceDataProviderC
             {
                 var temp = expectedPlaces[i];
                 expectedPlaces[i] = expectedPlaces[expectedPlaces.Count - i - 1];
-                expectedPlaces[dbPlaces.Count - i - 1] = temp;
+                expectedPlaces[expectedPlaces.Count - i - 1] = temp;
             }
 
             // Act
@@ -137,19 +141,22 @@ namespace CampingWebForms.Tests.Services.DataProviders.CampingPlaceDataProviderC
                 {
                     Id = this.id_01,
                     Name = this.placeName_01,
-                    AddedBy = this.userName_01
+                    AddedBy = this.userName_01,
+                    AddedOn = this.date_01
                 },
                 new CampingPlace()
                 {
                     Id = this.id_02,
                     Name = this.placeName_02,
-                    AddedBy = this.userName_02
+                    AddedBy = this.userName_02,
+                    AddedOn = this.date_02
                 },
                 new CampingPlace()
                 {
                     Id = this.id_03,
                     Name = this.placeName_03,
-                    AddedBy = this.userName_01
+                    AddedBy = this.userName_03,
+                    AddedOn = this.date_03
                 }
             };
 
@@ -168,7 +175,8 @@ namespace CampingWebForms.Tests.Services.DataProviders.CampingPlaceDataProviderC
                     AddedBy = new CampingDB.Models.CampingUser()
                     {
                         UserName = this.userName_01
-                    }
+                    },
+                    AddedOn = this.date_01
                 },
                 new CampingDB.Models.CampingPlace()
                 {
@@ -177,7 +185,8 @@ namespace CampingWebForms.Tests.Services.DataProviders.CampingPlaceDataProviderC
                     AddedBy = new CampingDB.Models.CampingUser()
                     {
                         UserName = this.userName_02
-                    }
+                    },
+                    AddedOn = this.date_02
                 },
                 new CampingDB.Models.CampingPlace()
                 {
@@ -186,7 +195,8 @@ namespace CampingWebForms.Tests.Services.DataProviders.CampingPlaceDataProviderC
                     AddedBy = new CampingDB.Models.CampingUser()
                     {
                         UserName = this.userName_03
-                    }
+                    },
+                    AddedOn = this.date_03
                 }
             };
 

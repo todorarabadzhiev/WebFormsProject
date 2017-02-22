@@ -16,7 +16,7 @@ namespace CampingWebForms.Tests.MVP.Presenters.AddCampingPlacePresenterClass
     public class View_AddCampingPlaceClick_Should
     {
         [Test]
-        public void AddCorrectSiteCategoriesToViewModel_WhenAddCampingPlaceLoadEventIsRaised()
+        public void CallAddCampingPlaceMethodOfCampingPlaceProvider_WhenAddCampingPlaceClickEventIsRaised()
         {
             // Arrange
             var view = Mock.Create<IAddCampingPlaceView>();

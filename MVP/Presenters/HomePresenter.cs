@@ -7,10 +7,16 @@ namespace MVP.Presenters
 {
     public class HomePresenter : Presenter<IHomeView>
     {
-        private readonly ICampingPlaceDataProvider provider;
+        protected readonly ICampingPlaceDataProvider provider;
+
         public HomePresenter(IHomeView view, ICampingPlaceDataProvider provider)
             : base(view)
         {
+            if (provider == null)
+            {
+                throw new ArgumentNullException("CampingPlaceDataProvider");
+            }
+
             this.provider = provider;
 
             this.View.HomeLoad += this.View_HomeLoad;

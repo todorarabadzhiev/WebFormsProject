@@ -7,10 +7,16 @@ namespace MVP.Presenters
 {
     public class EditUsersPresenter : Presenter<IEditUsersView>
     {
-        private readonly ICampingUserDataProvider provider;
+        protected readonly ICampingUserDataProvider provider;
+
         public EditUsersPresenter(IEditUsersView view, ICampingUserDataProvider provider) 
             : base(view)
         {
+            if (provider == null)
+            {
+                throw new ArgumentNullException("CampingUserDataProvider");
+            }
+
             this.provider = provider;
             this.View.EditUsersGetCampingUsers += View_EditUsersGetCampingUsers;
         }
