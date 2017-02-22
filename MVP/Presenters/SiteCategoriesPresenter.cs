@@ -7,10 +7,16 @@ namespace MVP.Presenters
 {
     public class SiteCategoriesPresenter : Presenter<ISiteCategoriesView>
     {
-        private readonly ISiteCategoryDataProvider provider;
+        protected readonly ISiteCategoryDataProvider provider;
+
         public SiteCategoriesPresenter(ISiteCategoriesView view, ISiteCategoryDataProvider provider)
             : base(view)
         {
+            if (provider == null)
+            {
+                throw new ArgumentNullException("SiteCategoryProvider");
+            }
+
             this.provider = provider;
 
             this.View.SiteCategoriesLoad += this.View_SiteCategories;

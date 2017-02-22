@@ -3,11 +3,7 @@ using MVP.Presenters;
 using MVP.Views;
 using NUnit.Framework;
 using Services.DataProviders;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Telerik.JustMock;
 
 namespace CampingWebForms.Tests.MVP.Presenters.AddCampingPlacePresenterClass

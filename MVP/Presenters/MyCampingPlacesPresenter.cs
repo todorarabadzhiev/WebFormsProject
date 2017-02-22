@@ -1,16 +1,23 @@
 ﻿using MVP.Models.EventModels;
 using MVP.Views;
 using Services.DataProviders;
+using System;
 using WebFormsMvp;
 
 namespace MVP.Presenters
 {
     public class MyCampingPlacesPresenter : Presenter<IMyCampingPlacesView>
     {
-        private readonly ICampingPlaceDataProvider provider;
+        protected readonly ICampingPlaceDataProvider provider;
+
         public MyCampingPlacesPresenter(IMyCampingPlacesView view, ICampingPlaceDataProvider provider)
             : base(view)
         {
+            if (provider == null)
+            {
+                throw new ArgumentNullException("CampingPlaceProvider");
+            }
+
             this.provider = provider;
 
             this.View.MyCampingPlacesGetData += this.View_MyCampingPlacesGetData;
