@@ -4,10 +4,6 @@ using MVP.Views;
 using NUnit.Framework;
 using Services.DataProviders;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Telerik.JustMock;
 
 namespace CampingWebForms.Tests.MVP.Presenters.EditUsersPresenterClass
@@ -15,6 +11,20 @@ namespace CampingWebForms.Tests.MVP.Presenters.EditUsersPresenterClass
     [TestFixture]
     public class Constructor_Should
     {
+        [Test]
+        public void CreateInstanceOfEditUsersPresenter_WhenArgumentIsValid()
+        {
+            // Arrange
+            var view = Mock.Create<IEditUsersView>();
+            var provider = Mock.Create<ICampingUserDataProvider>();
+
+            // Act
+            EditUsersPresenter presenter = new EditUsersPresenter(view, provider);
+
+            // Assert
+            Assert.IsInstanceOf<EditUsersPresenter>(presenter);
+        }
+
         [Test]
         public void ThrowArgumentNullExceptionWithMessageCampingUserDataProvider_WhenCampingUserDataProviderArgumentIsNull()
         {

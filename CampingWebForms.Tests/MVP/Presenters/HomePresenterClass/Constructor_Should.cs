@@ -12,6 +12,20 @@ namespace CampingWebForms.Tests.MVP.Presenters.HomePresenterClass
     public class Constructor_Should
     {
         [Test]
+        public void CreateInstanceOfHomePresenter_WhenArgumentIsValid()
+        {
+            // Arrange
+            var view = Mock.Create<IHomeView>();
+            var provider = Mock.Create<ICampingPlaceDataProvider>();
+
+            // Act
+            HomePresenter presenter = new HomePresenter(view, provider);
+
+            // Assert
+            Assert.IsInstanceOf<HomePresenter>(presenter);
+        }
+
+        [Test]
         public void ThrowArgumentNullExceptionWithMessageCampingPlaceDataProvider_WhenCampingPlaceDataProviderArgumentIsNull()
         {
             // Arrange

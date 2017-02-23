@@ -56,6 +56,7 @@
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\MyCampingPlacesViewModel.cs" />
     <Compile Include="Models\SiteCategoriesViewModel.cs" />
+    <Compile Include="Models\SiteCategoryPlacesViewModel.cs" />
     <Compile Include="Presenters\AddCampingPlacePresenter.cs" />
     <Compile Include="Presenters\CampingPlaceDetailsPresenter.cs" />
     <Compile Include="Presenters\CreateUserPresenter.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Presenters\HomePresenter.cs" />
     <Compile Include="Presenters\MyCampingPlacesPresenter.cs" />
     <Compile Include="Presenters\SiteCategoriesPresenter.cs" />
+    <Compile Include="Presenters\SiteCategoryPlacesPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\IAddCampingPlaceView.cs" />
     <Compile Include="Views\ICampingPlaceDetailsView.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="Views\IHomeView.cs" />
     <Compile Include="Views\IMyCampingPlacesView.cs" />
     <Compile Include="Views\ISiteCategoriesView.cs" />
+    <Compile Include="Views\ISiteCategoryPlacesView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Services\Services.csproj">

@@ -17,8 +17,8 @@
             <ItemTemplate>
                 <td class="col-md-2">
                     <img src="image" alt="снимка тип място" /><br />
-                    <asp:HyperLink runat="server" NavigateUrl="~/Contact.aspx" Text='<%# Eval("Name") %>'></asp:HyperLink>
-                    <p>Кратка информация за типа място</p>
+                    <asp:HyperLink runat="server" ID="hlDetails" Text='<%# Eval("Name") %>'
+                        NavigateUrl='<%# "/SiteCategoryPlaces.aspx?name=" + Eval("Name") %>' />
                 </td>
             </ItemTemplate>
 

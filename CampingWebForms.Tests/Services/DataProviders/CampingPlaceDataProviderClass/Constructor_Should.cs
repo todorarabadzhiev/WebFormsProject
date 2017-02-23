@@ -11,6 +11,18 @@ namespace CampingWebForms.Tests.Services.DataProviders.CampingPlaceDataProviderC
     public class Constructor_Should
     {
         [Test]
+        public void CreateCampingPlaceDataProviderInstance_WhenProvidedArgumentsAreValid()
+        {
+            // Arrange
+            ICampingDBRepository repository = Mock.Create<ICampingDBRepository>();
+            Func<IUnitOfWork> unitOfWork = Mock.Create<Func<IUnitOfWork>>();
+            CampingPlaceDataProvider provider = new CampingPlaceDataProvider(repository, unitOfWork);
+
+            // Act&Assert
+            Assert.IsInstanceOf<CampingPlaceDataProvider>(provider);
+        }
+
+        [Test]
         public void ThrowArgumentNullExceptionWithMessageContainingCampingDBRepository_WhenProvidedRepositoryIsNull()
         {
             // Arrange

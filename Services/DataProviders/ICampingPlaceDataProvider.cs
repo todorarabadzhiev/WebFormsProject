@@ -7,6 +7,7 @@ namespace Services.DataProviders
     public interface ICampingPlaceDataProvider
     {
         IEnumerable<ICampingPlace> GetUserCampingPlaces(string userName);
+        IEnumerable<ICampingPlace> GetSiteCategoryCampingPlaces(string categoryName);
         IEnumerable<ICampingPlace> GetAllCampingPlaces();
         IEnumerable<ICampingPlace> GetLatestCampingPlaces(int count);
         IEnumerable<ICampingPlace> GetCampingPlaceById(Guid id);

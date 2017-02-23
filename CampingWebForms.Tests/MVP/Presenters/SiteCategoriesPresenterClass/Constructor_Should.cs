@@ -12,6 +12,20 @@ namespace CampingWebForms.Tests.MVP.Presenters.SiteCategoriesPresenterClass
     public class Constructor_Should
     {
         [Test]
+        public void CreateInstanceOfSiteCategoriesPresenter_WhenArgumentIsValid()
+        {
+            // Arrange
+            var view = Mock.Create<ISiteCategoriesView>();
+            var provider = Mock.Create<ISiteCategoryDataProvider>();
+
+            // Act
+            var presenter = new SiteCategoriesPresenter(view, provider);
+
+            // Assert
+            Assert.IsInstanceOf<SiteCategoriesPresenter>(presenter);
+        }
+
+        [Test]
         public void ThrowArgumentNullExceptionWithMessageSiteCategoryProvider_WhenSiteCategoryDataProviderArgumentIsNull()
         {
             // Arrange

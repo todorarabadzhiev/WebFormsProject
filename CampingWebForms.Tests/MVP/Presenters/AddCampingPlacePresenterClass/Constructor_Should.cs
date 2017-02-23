@@ -12,6 +12,22 @@ namespace CampingWebForms.Tests.MVP.Presenters.AddCampingPlacePresenterClass
     public class Constructor_Should
     {
         [Test]
+        public void CreateInstanceOfAddCampingPlacePresenter_WhenAllArgumentsAreValid()
+        {
+            // Arrange
+            var view = Mock.Create<IAddCampingPlaceView>();
+            ICampingPlaceDataProvider campingPlaceProvider = Mock.Create<ICampingPlaceDataProvider>();
+            ISightseeingDataProvider sightseeingProvider = Mock.Create<ISightseeingDataProvider>();
+            ISiteCategoryDataProvider siteCategoryProvider = Mock.Create<ISiteCategoryDataProvider>();
+
+            // Act
+            AddCampingPlacePresenter presenter = new AddCampingPlacePresenter(view, campingPlaceProvider, sightseeingProvider, siteCategoryProvider);
+
+            // Assert
+            Assert.IsInstanceOf<AddCampingPlacePresenter>(presenter);
+        }
+
+        [Test]
         public void ThrowArgumentNullExceptionWithMessageCampingPlaceProvider_WhenCampingPlaceProviderArgumentIsNull()
         {
             // Arrange

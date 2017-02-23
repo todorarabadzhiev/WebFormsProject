@@ -89,6 +89,7 @@
     <Compile Include="Mocked\SightseeingDataProviderMock.cs" />
     <Compile Include="Mocked\SiteCategoriesPresenterMock.cs" />
     <Compile Include="Mocked\SiteCategoryDataProviderMock.cs" />
+    <Compile Include="Mocked\SiteCategoryPlacesPresenterMock.cs" />
     <Compile Include="MVP\Presenters\AddCampingPlacePresenterClass\Constructor_Should.cs" />
     <Compile Include="MVP\Presenters\AddCampingPlacePresenterClass\View_AddCampingPlaceClick_Should.cs" />
     <Compile Include="MVP\Presenters\AddCampingPlacePresenterClass\View_AddCampingPlaceLoad_Should.cs" />
@@ -105,6 +106,8 @@
     <Compile Include="MVP\Presenters\MyCampingPlacesPresenterClass\View_MyCampingPlacesGetData_Should.cs" />
     <Compile Include="MVP\Presenters\SiteCategoriesPresenterClass\Constructor_Should.cs" />
     <Compile Include="MVP\Presenters\SiteCategoriesPresenterClass\View_SiteCategories_Should.cs" />
+    <Compile Include="MVP\Presenters\SiteCategoryPlacesPresenterClass\Constructor_Should.cs" />
+    <Compile Include="MVP\Presenters\SiteCategoryPlacesPresenterClass\View_SiteCategoryGetPlaces_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DataProviders\CampingPlaceDataProviderClass\AddCampingPlace_Should.cs" />
     <Compile Include="Services\DataProviders\CampingPlaceDataProviderClass\Constructor_Should.cs" />
@@ -112,6 +115,7 @@
     <Compile Include="Services\DataProviders\CampingPlaceDataProviderClass\GetAllCampingPlaces_Should.cs" />
     <Compile Include="Services\DataProviders\CampingPlaceDataProviderClass\GetCampingPlaceById_Should.cs" />
     <Compile Include="Services\DataProviders\CampingPlaceDataProviderClass\GetLatestCampingPlaces_Should.cs" />
+    <Compile Include="Services\DataProviders\CampingPlaceDataProviderClass\GetSiteCategoryCampingPlaces_Should.cs" />
     <Compile Include="Services\DataProviders\CampingPlaceDataProviderClass\GetUserCampingPlaces_Should.cs" />
     <Compile Include="Services\DataProviders\CampingUserDataProviderClass\AddCampingUser_Should.cs" />
     <Compile Include="Services\DataProviders\CampingUserDataProviderClass\Constructor_Should.cs" />

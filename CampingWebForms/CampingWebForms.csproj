@@ -228,6 +228,7 @@
     <Content Include="HttpErrors\403.html" />
     <Content Include="HttpErrors\404.html" />
     <Content Include="HttpErrors\500.html" />
+    <Content Include="SiteCategoryPlaces.aspx" />
     <Content Include="User\AddCampingPlace.aspx" />
     <Content Include="User\CampingPlaceDetails.aspx" />
     <Content Include="Contact.aspx" />
@@ -429,6 +430,13 @@
     </Compile>
     <Compile Include="HttpErrors\500.aspx.designer.cs">
       <DependentUpon>500.html</DependentUpon>
+    </Compile>
+    <Compile Include="SiteCategoryPlaces.aspx.cs">
+      <DependentUpon>SiteCategoryPlaces.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteCategoryPlaces.aspx.designer.cs">
+      <DependentUpon>SiteCategoryPlaces.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\AddCampingPlace.aspx.cs">
       <DependentUpon>AddCampingPlace.aspx</DependentUpon>

@@ -12,6 +12,20 @@ namespace CampingWebForms.Tests.MVP.Presenters.CreateUserPresenterClass
     public class Constructor_Should
     {
         [Test]
+        public void CreateInstanceOfCreateUserPresenter_WhenArgumentIsValid()
+        {
+            // Arrange
+            var view = Mock.Create<ICreateUserView>();
+            var provider = Mock.Create<ICampingUserDataProvider>();
+
+            // Act
+            CreateUserPresenter presenter = new CreateUserPresenter(view, provider);
+
+            // Assert
+            Assert.IsInstanceOf<CreateUserPresenter>(presenter);
+        }
+
+        [Test]
         public void ThrowArgumentNullExceptionWithMessageCampingUserDataProvider_WhenCampingUserDataProviderArgumentIsNull()
         {
             // Arrange

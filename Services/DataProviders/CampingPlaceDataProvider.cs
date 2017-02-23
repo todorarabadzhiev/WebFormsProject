@@ -45,6 +45,26 @@ namespace Services.DataProviders
             return places;
         }
 
+        public IEnumerable<ICampingPlace> GetSiteCategoryCampingPlaces(string categoryName)
+        {
+            if (categoryName == null)
+            {
+                return null;
+            }
+
+            IGenericRepository<CampingDB.Models.CampingPlace> capmingPlaceRepository =
+                this.repository.GetCampingPlaceRepository();
+            var places = new List<ICampingPlace>();
+            var dbPlaces = capmingPlaceRepository.GetAll(p => (!p.IsDeleted) &&
+            (p.SiteCategories.FirstOrDefault(s => s.Name == categoryName) != null));
+            foreach (var p in dbPlaces)
+            {
+                places.Add(ConvertToPlace(p));
+            }
+
+            return places;
+        }
+
         public void AddCampingPlace(
             string name, string addedBy, string description, string googleMapsUrl, bool hasWater,
             IEnumerable<string> sightseeingNames, IEnumerable<string> siteCategoryNames,
@@ -60,7 +80,7 @@ namespace Services.DataProviders
                 throw new ArgumentNullException("UserName");
             }
 
-            if (imageFileNames == null || 
+            if (imageFileNames == null ||
                 !imageFileNames.GetEnumerator().MoveNext() ||
                 imageFilesData == null ||
                 !imageFilesData.GetEnumerator().MoveNext())
